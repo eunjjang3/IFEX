@@ -1,0 +1,231 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v[0-9]*'
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gate:
+    name: Validate release
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      image: ${{ steps.release.outputs.image }}
+      version: ${{ steps.release.outputs.version }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Validate tag and package version
+        id: release
+        shell: bash
+        run: |
+          node scripts/verify-release-version.mjs "$GITHUB_REF_NAME"
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" "origin/${{ github.event.repository.default_branch }}"; then
+            echo "Release tags must point to the default branch history." >&2
+            exit 1
+          fi
+          echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          echo "image=ghcr.io/${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run project verification
+        run: npm run verify
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev
+
+      - name: Build and verify container
+        run: ./scripts/verify-container.sh
+
+  desktop:
+    name: Desktop (${{ matrix.label }})
+    needs: quality-gate
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: macOS Apple Silicon
+            runner: macos-15
+            script: desktop:package:mac:arm64
+            bundle: release/IFEX-darwin-arm64/IFEX.app
+            artifact: IFEX-v${{ needs.quality-gate.outputs.version }}-macos-arm64-unsigned.zip
+          - label: macOS Intel
+            runner: macos-15-intel
+            script: desktop:package:mac:x64
+            bundle: release/IFEX-darwin-x64/IFEX.app
+            artifact: IFEX-v${{ needs.quality-gate.outputs.version }}-macos-x64-unsigned.zip
+          - label: Windows x64
+            runner: windows-2025
+            script: desktop:package:win:x64
+            bundle: release/IFEX-win32-x64
+            artifact: IFEX-v${{ needs.quality-gate.outputs.version }}-windows-x64-unsigned.zip
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Package desktop application
+        run: npm run ${{ matrix.script }}
+
+      - name: Verify macOS bundle
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          test -x "${{ matrix.bundle }}/Contents/MacOS/IFEX"
+          test -f "${{ matrix.bundle }}/Contents/Resources/app.asar"
+
+      - name: Archive macOS bundle
+        if: runner.os == 'macOS'
+        shell: bash
+        run: ditto -c -k --sequesterRsrc --keepParent "${{ matrix.bundle }}" "${{ matrix.artifact }}"
+
+      - name: Verify and archive Windows bundle
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $bundle = '${{ matrix.bundle }}'
+          if (-not (Test-Path "$bundle/IFEX.exe" -PathType Leaf)) {
+            throw 'Packaged IFEX.exe was not found.'
+          }
+          if (-not (Test-Path "$bundle/resources/app.asar" -PathType Leaf)) {
+            throw 'Packaged app.asar was not found.'
+          }
+          Compress-Archive -Path $bundle -DestinationPath '${{ matrix.artifact }}'
+
+      - name: Upload desktop archive
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: ${{ matrix.artifact }}
+          path: ${{ matrix.artifact }}
+          if-no-files-found: error
+          retention-days: 7
+
+  container:
+    name: Publish container image
+    needs: [quality-gate, desktop]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@96fe6ef7f33517b61c61be40b68a1882f3264fb8 # v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate image metadata
+        id: metadata
+        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6
+        with:
+          images: ${{ needs.quality-gate.outputs.image }}
+          flavor: latest=auto
+          tags: |
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+
+      - name: Build and push multi-platform image
+        id: push
+        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.metadata.outputs.tags }}
+          labels: ${{ steps.metadata.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Attest container provenance
+        uses: actions/attest-build-provenance@78e6cbd37d0ac1a40113c04f2037dacf1ea3f12e # v4
+        with:
+          subject-name: ${{ needs.quality-gate.outputs.image }}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+
+  github-release:
+    name: Publish GitHub release
+    needs: [quality-gate, desktop, container]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      attestations: write
+      id-token: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Download desktop archives
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          pattern: IFEX-*
+          path: artifacts
+          merge-multiple: true
+
+      - name: Generate SHA-256 checksums
+        working-directory: artifacts
+        shell: bash
+        run: sha256sum IFEX-*.zip > "IFEX-v${{ needs.quality-gate.outputs.version }}-SHA256SUMS.txt"
+
+      - name: Attest desktop artifacts
+        uses: actions/attest-build-provenance@78e6cbd37d0ac1a40113c04f2037dacf1ea3f12e # v4
+        with:
+          subject-path: artifacts/IFEX-*
+
+      - name: Create or update GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" artifacts/* --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" artifacts/* \
+              --verify-tag \
+              --generate-notes \
+              --title "IFEX $GITHUB_REF_NAME"
+          fi

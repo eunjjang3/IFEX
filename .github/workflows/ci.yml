@@ -39,6 +39,9 @@ jobs:
       - name: Run lint
         run: npm run lint
 
+      - name: Check desktop entry points
+        run: npm run check:desktop
+
       - name: Build production bundle
         run: npm run build
 
