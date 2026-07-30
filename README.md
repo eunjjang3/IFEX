@@ -1,40 +1,154 @@
+<div align="center">
+
 # IFEX
 
-IFEX is a local-first image forensics viewer. It examines file identity, metadata leakage, JPEG encoding structure, editing traces, ICC profiles, embedded thumbnails, and C2PA Content Credentials without sending the analyzed file to the IFEX server.
+### Local-first image forensics, without the upload.
 
-Pixel Lab renders clipping, JPEG error-level analysis (ELA), high-frequency noise residuals, Sobel edge gradients, median-filter residuals, copy-move block matches, a Bayer CFA phase-residual approximation, separated Cb/Cr chroma channels, a multi-pass JPEG Ghost map, and decoded-luminance 8×8 DCT energy directly over the local preview. The copy-move view links repeated block regions only after neighboring blocks agree on a shared displacement. The CFA view compares green-channel prediction-error variance across local 2×2 phases; it is a lightweight heuristic rather than the full Popescu–Farid EM detector. JPEG Ghost scans eight browser-encoder qualities from Q50 to Q100, while the DCT view recomputes energy from decoded pixels rather than parsing original bitstream coefficients. Derived views are labeled as observed evidence or heuristics; none is presented as proof of manipulation.
+Inspect metadata leakage, file provenance, camera traces, JPEG structure, C2PA credentials, and pixel-level anomalies directly in your browser or desktop app.
 
-The interface reports observed evidence and limitations. It does not assign a privacy score, claim that a file is safe, or treat missing metadata as proof of authenticity.
+<p>
+  <a href="https://github.com/eunjjang3/IFEX/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/eunjjang3/IFEX/ci.yml?branch=main&style=flat-square&label=CI"></a>
+  <a href="https://github.com/eunjjang3/IFEX/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/eunjjang3/IFEX?display_name=tag&sort=semver&style=flat-square"></a>
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/eunjjang3/IFEX?style=flat-square"></a>
+  <img alt="Node.js 22.12 or newer" src="https://img.shields.io/badge/Node.js-22.12%2B-43853D?style=flat-square&logo=nodedotjs&logoColor=white">
+  <a href="https://github.com/eunjjang3/IFEX/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/eunjjang3/IFEX?style=flat-square&logo=github"></a>
+</p>
 
-The inspection interface can switch between English, Korean, and Japanese without re-running analysis. Locale-specific UI fonts are bundled with the application; the header and footer retain a fixed brand typeface across languages.
+<p>
+  <a href="#quick-start"><strong>Quick start</strong></a> ·
+  <a href="#what-you-can-inspect"><strong>Features</strong></a> ·
+  <a href="#privacy-model"><strong>Privacy</strong></a> ·
+  <a href="#desktop-app"><strong>Desktop</strong></a> ·
+  <a href="#deployment"><strong>Deployment</strong></a>
+</p>
 
-## Usage
+![IFEX evidence-first inspection workspace](.github/assets/ifex-analysis.jpg)
 
-1. Open IFEX and select or drop one or more images.
-2. Review file identity, metadata leakage, camera details, GPS, raw tags, and Pixel Lab views.
-3. Treat observations and heuristics as investigative leads, not authenticity or malware verdicts.
-4. Remove loaded files or close the tab or desktop app to release the local in-memory copies and previews.
+<sub>Real IFEX output generated from the bundled, non-identifying local sample.</sub>
 
-Supported signatures include JPEG, PNG, WebP, AVIF, HEIC/HEIF, TIFF, DNG, NEF, and Canon CR2. Strict mode is enabled by default and rejects extension or MIME mismatches, unknown signatures, empty files, and generic `.raw` files without an identifiable supported format. A RAW file may have analysis results without a preview when no embedded image can be decoded safely.
+</div>
 
-### Browser requirements
+> [!IMPORTANT]
+> IFEX reports observed evidence and bounded heuristics. It does not certify authenticity, assign a privacy score, prove that a file is safe, or replace expert examination.
 
-Safe analysis requires Web Workers, `OffscreenCanvas.convertToBlob`, and `createImageBitmap`. IFEX rejects analysis when those APIs are unavailable unless an operator explicitly enables `IFEX_ALLOW_UNSAFE_PREVIEW`; the unsafe fallback directly decodes the original in the main browser context and is disabled by default.
+## Why IFEX?
 
-Browser support is feature-based rather than user-agent-based. Test the production build in the browsers required by a deployment, especially for HEIC/HEIF and RAW preview support, because available decoders vary by browser and operating system.
+Most online metadata tools begin with an upload. IFEX begins with a boundary: the analyzed file stays in browser memory, parsing runs in disposable Web Workers, and the normal preview path uses a size-limited PNG re-encoded locally.
 
-## Development
+- **Local-first by design** — analyzed files and metadata are not uploaded to an IFEX server.
+- **Evidence before verdicts** — findings explain what was observed and where the method stops.
+- **Deep JPEG inspection** — structure, quantization, subsampling, quality estimates, and diagnostic overlays.
+- **Provenance-aware** — C2PA Content Credentials and IPTC Digital Source Type semantics are inspected conservatively.
+- **Browser and desktop** — use the same sandboxed workspace on the web, macOS, or Windows.
+- **English · 한국어 · 日本語** — instant, persisted language switching with locally bundled typography.
 
-Node.js 22.12 or newer is required.
+If IFEX is useful to your investigations, research, or photography workflow, consider giving the repository a star. It helps other curious people find it.
+
+## What you can inspect
+
+| Surface | What IFEX shows |
+| --- | --- |
+| **File Origin** | Binary signature, extension/MIME consistency, SHA-256 identity, JPEG structure, processing traces, and C2PA signals |
+| **Leakage** | Metadata fields that may expose identity, device details, timestamps, software, thumbnails, or location |
+| **Camera Specs** | Camera and lens identity, serials, focal length, firmware, sensor evidence, crop factor, and JPEG quality estimate |
+| **GPS Map** | Embedded coordinates, opt-in OpenStreetMap tiles, opt-in reverse geocoding, and external map links |
+| **IPTC & XMP** | Structured editorial, rights, provenance, and application metadata |
+| **Raw Tags** | Searchable source-level metadata values and namespaces |
+| **Pixel Lab** | Clipping, ELA, residuals, gradients, copy-move candidates, CFA phase, chroma planes, JPEG Ghost, and 8×8 DCT energy |
+
+### Pixel Lab
+
+![IFEX Pixel Lab with the JPEG Ghost overlay](.github/assets/ifex-pixel-lab.jpg)
+
+Pixel Lab renders diagnostic maps directly over the local preview:
+
+- clipping and channel saturation;
+- JPEG error-level analysis (ELA);
+- high-frequency noise and median-filter residuals;
+- Sobel edge gradients;
+- copy-move block matches with neighborhood displacement agreement;
+- Bayer CFA phase-residual approximation;
+- separated Cb and Cr chroma channels;
+- multi-pass JPEG Ghost scanning from Q50 to Q100;
+- decoded-luminance 8×8 DCT energy.
+
+These are investigative leads, not proof of manipulation. The CFA view is a lightweight phase heuristic rather than the full Popescu–Farid EM detector, and the DCT view works from decoded pixels rather than original bitstream coefficients.
+
+## Quick start
+
+### Browser development
+
+Requires **Node.js 22.12 or newer**.
 
 ```bash
-npm install
+git clone https://github.com/eunjjang3/IFEX.git
+cd IFEX
+npm ci
 npm run dev
 ```
 
-### Desktop development
+Open the local URL printed by Vite, then choose an image or click **Use a local sample** for a safe product tour.
 
-IFEX also runs as a sandboxed Electron application on macOS and Windows. The renderer reuses the browser application and its disposable analysis Workers; it does not receive Node.js integration or direct filesystem privileges. The preload bridge exposes only the desktop platform identifier, and external links are opened in the system browser only when their HTTPS origin is explicitly allowlisted.
+### Docker
+
+```bash
+git clone https://github.com/eunjjang3/IFEX.git
+cd IFEX
+docker compose up --build
+```
+
+Open <http://localhost>. Override the host port with `IFEX_PORT` in a local `.env` file when needed.
+
+### Verify everything
+
+```bash
+npm run verify
+```
+
+The verification suite checks licenses, unit tests, lint, desktop entry points, TypeScript, the production build, and the build-environment allowlist. Container behavior and hardened headers can be checked separately with:
+
+```bash
+./scripts/verify-container.sh
+```
+
+The script binds a uniquely named test container to a Docker-assigned `127.0.0.1` port and removes its container and image when finished.
+
+## Supported files
+
+IFEX recognizes **JPEG, PNG, WebP, AVIF, HEIC/HEIF, TIFF, DNG, Nikon NEF, and Canon CR2** by bounded signature inspection. Strict mode is enabled by default and rejects extension or MIME mismatches, unknown signatures, empty files, and generic `.raw` files without an identifiable supported format.
+
+A RAW file may produce metadata and structure results without a preview when the browser cannot safely decode an embedded image.
+
+### Browser requirements
+
+Safe analysis requires Web Workers, `OffscreenCanvas.convertToBlob`, and `createImageBitmap`. IFEX fails closed when those APIs are unavailable unless an operator explicitly enables `IFEX_ALLOW_UNSAFE_PREVIEW`.
+
+Support is feature-based rather than user-agent-based. Test the production build in every browser required by a deployment, especially for HEIC/HEIF and RAW previews because decoder availability varies by browser and operating system.
+
+## Privacy model
+
+```mermaid
+flowchart LR
+    A[Your image] --> B[Browser memory]
+    B --> C[Disposable workers]
+    C --> D[Local evidence report]
+    B -. explicit user action only .-> E[Map / geocoding / search copy]
+```
+
+Opening IFEX and analyzing an image do not upload the image or its metadata to an IFEX server. UI fonts, camera data, IPTC vocabulary, WASM, and analysis code are bundled with the application.
+
+External network access occurs only after a matching user action:
+
+- **Load external map** requests OpenStreetMap tiles. The provider receives the browser IP, site origin through the standard Referer, and tile coordinates approximating the embedded location—not the image file.
+- **Fetch Address** sends the exact embedded coordinates and site origin to Nominatim. Requests are globally serialized with at least one second between starts.
+- **Map links** send coordinates to Google Maps, Apple Maps, or OpenStreetMap when opened.
+- **Reverse image search** creates and downloads a metadata-free JPEG locally. Pixels leave the browser only if the user later uploads that copy to a selected service.
+
+The selected provider's privacy policy applies once the user chooses to contact it.
+
+## Desktop app
+
+IFEX also runs as a sandboxed Electron application on macOS and Windows. The renderer has no Node.js integration or direct filesystem privileges; its preload bridge exposes only the desktop platform identifier. Permissions and webviews are denied, and only explicitly allowlisted HTTPS origins may open in the system browser.
 
 Start Vite and Electron together:
 
@@ -48,7 +162,7 @@ Build an unpacked application bundle for the current host:
 npm run desktop:package
 ```
 
-Explicit cross-platform targets are also available:
+Explicit targets are available for macOS arm64, macOS x64, and Windows x64:
 
 ```bash
 npm run desktop:package:mac:arm64
@@ -56,55 +170,16 @@ npm run desktop:package:mac:x64
 npm run desktop:package:win:x64
 ```
 
-Bundles are written to `release/`. These development bundles are not distribution-signed, notarized, or wrapped in a DMG/MSI installer; macOS packaging applies only an ad-hoc local signature. Production distribution should build on the target operating system and add platform signing before publishing. The desktop renderer is built with relative asset paths so Workers, WASM, fonts, and bundled notices resolve from the packaged application without a server.
-
-Verification:
-
-```bash
-npm run verify
-```
-
-### Analysis references and update commands
-
-- File intake reads at most 4,100 bytes for signature detection. A small deterministic detector remains the fallback, while `file-type` provides an independent second opinion restricted to IFEX's existing supported-format allowlist. A matching signature is not a decoder-safety or antivirus verdict.
-- EXIF is parsed at runtime with `exifr`. Representative metadata tests are independently checked with development-only `ExifReader` so one parser cannot silently define the expected result.
-- JPEG marker traversal, quantization-table extraction, end-of-image handling, and subsampling detection share one bounded parser.
-- C2PA Digital Source Type values are interpreted against a pinned, locally bundled transform of the official IPTC vocabulary. Only IPTC-defined generative-AI concepts produce an AI provenance signal.
-
-Refresh the two attributed datasets explicitly, then review and commit the generated provenance fields and data diff:
-
-```bash
-npm run update:lensfun
-npm run update:iptc-source-types
-```
-
-These commands use the network only during development. Normal image analysis uses the committed local datasets.
+Bundles are written to `release/`. Development bundles are unsigned, are not notarized, and are not wrapped in a DMG/MSI installer. Production distribution should build on the target operating system and add platform signing before publishing.
 
 ## Deployment
 
-The production Docker image builds the Vite application and serves the static output through Nginx. It is suitable for OCI Ubuntu 24 deployments managed by Coolify.
+The production Docker image builds the Vite application and serves static output through Nginx. Docker and Coolify deployments read `IFEX_*` values when the container starts, so limits can change without rebuilding the image.
 
-Build and run it locally with:
+Copy [`.env.example`](.env.example) to `.env` for Docker/Compose overrides. Static Vite deployments can use the documented `VITE_IFEX_*` equivalents at build time; runtime values take precedence. Invalid or out-of-range values fall back to hardened defaults.
 
-```bash
-docker compose up --build
-```
-
-The CI container check can also be run directly:
-
-```bash
-./scripts/verify-container.sh
-```
-
-The verification script publishes the test container on a Docker-assigned `127.0.0.1` port only, checks runtime configuration and security headers, and removes its uniquely named container and image when finished.
-
-For Docker Compose, `IFEX_PORT` selects the host port (default `80`) and `IFEX_RESTART_POLICY` selects the Compose restart policy (default `unless-stopped`). These two container settings are not written to the browser runtime configuration. Copy [`.env.example`](.env.example) to `.env` when local overrides are needed; `.env` files are ignored by Git.
-
-### Hardened image-analysis settings
-
-IFEX verifies a bounded 4,100-byte prefix before parsing, analyzes originals in disposable workers, and displays only a size-limited PNG preview re-encoded in the browser. Encoded JPEG, PNG, and WebP dimensions are checked before browser decoding when their standard headers are available, and decoded dimensions are checked again afterward. JPEG structure output is capped at 4,096 segments and 16 quantization tables; C2PA report collections and text are bounded before crossing the Worker boundary. The preview is not byte-for-byte identical to the original; hashes, metadata, C2PA, file structure, and Pixel Lab calculations still use the original local file. A RAW file without a decodable embedded preview can be analyzed without displaying its original pixels.
-
-Docker and Coolify deployments read `IFEX_*` variables when the container starts, so changing a limit does not require rebuilding the image. Static Vite deployments can set only the documented equivalent `VITE_IFEX_*` variables at build time; other `VITE_*` values are not passed into application configuration. Runtime values take precedence over build-time values, and invalid or out-of-range values fall back to the hardened defaults. Docker build contexts exclude `.env` and `.env.*` files so local settings are not sent to a builder.
+<details>
+<summary><strong>Runtime configuration reference</strong></summary>
 
 | Runtime variable | Default | Allowed range |
 | --- | ---: | ---: |
@@ -127,31 +202,83 @@ Docker and Coolify deployments read `IFEX_*` variables when the container starts
 | `IFEX_MAX_METADATA_TOTAL_CHARS` | `1048576` | 65536–16777216 |
 | `IFEX_ALLOW_UNSAFE_PREVIEW` | `false` | `true` / `false` |
 
-Strict file-type mode rejects unknown signatures, extension or declared-MIME mismatches, and generic `.raw` files whose format cannot be identified. DNG and NEF remain supported as TIFF-family files. `IFEX_ALLOW_UNSAFE_PREVIEW=true` explicitly permits direct main-thread decoding on browsers without the safe Worker APIs and should only be used in a trusted environment. See [`.env.example`](.env.example) for Docker and Coolify, or copy [`.env.local.example`](.env.local.example) to `.env.local` for local Vite development.
+See [`.env.local.example`](.env.local.example) for local Vite development. Docker build contexts exclude `.env` and `.env.*` files.
 
-These controls reduce exposure to parser exploits and resource-exhaustion images; they are not an antivirus verdict and do not prove that a file is harmless. IFEX still does not upload analyzed files to its server.
+</details>
 
-## Privacy and external services
+### Automated releases
 
-Opening IFEX and analyzing an image do not upload the image or its metadata to an IFEX server. The application bundles its UI fonts locally and does not contact a font provider.
+Pushing a version tag matching `package.json` starts the release workflow. For example, package version `0.2.0` requires tag `v0.2.0`.
 
-Network access is limited to explicit user actions:
+```bash
+npm version patch
+git push origin main --follow-tags
+```
 
-- **External map:** clicking **Load external map** requests OpenStreetMap tiles. The tile provider receives the browser IP address, the IFEX site origin through the standard browser Referer, and tile coordinates that approximate the embedded GPS location, but not the image file. The map displays the required OpenStreetMap attribution.
-- **Reverse geocoding:** clicking **Fetch Address** sends the exact embedded coordinates and the IFEX site origin to the Nominatim service. IFEX serializes these requests globally with at least one second between request starts and displays OpenStreetMap attribution beside returned address data.
-- **Map links:** opening Google Maps, Apple Maps, or OpenStreetMap sends the coordinates to the selected provider.
-- **Reverse image search:** IFEX creates and downloads a metadata-free JPEG locally. Image pixels leave the browser only if the user then uploads that copy to the selected search service.
+After the verification and container gates pass, the workflow:
 
-The privacy policy of each external provider applies after the user chooses to contact it.
+- packages unsigned macOS arm64, macOS x64, and Windows x64 ZIPs;
+- publishes a multi-platform `linux/amd64` and `linux/arm64` image to `ghcr.io/eunjjang3/ifex`;
+- creates a GitHub Release with SHA-256 checksums and build provenance attestations.
 
-## Security
+Stable container tags include the exact version, major/minor version, major version, and `latest`.
 
-Report suspected vulnerabilities privately by following the [security policy](SECURITY.md). Do not post exploit details, sensitive data, or malicious sample files in a public issue.
+```bash
+docker pull ghcr.io/eunjjang3/ifex:latest
+```
+
+GitHub Container Registry packages may be private when first created. Set the package visibility to public once for anonymous pulls, or authenticate the deployment host with `read:packages` access. Desktop archives remain labeled `unsigned`; SmartScreen and Gatekeeper may warn until platform signing and Apple notarization are configured.
+
+## Analysis and security notes
+
+<details>
+<summary><strong>Hardened analysis boundaries</strong></summary>
+
+- File intake reads at most 4,100 bytes for signature detection. `file-type` provides an independent second opinion restricted to the existing allowlist.
+- Encoded JPEG, PNG, and WebP dimensions are checked before decoding when their standard headers are available, then checked again after decode.
+- Originals are analyzed in disposable workers. Normal previews are size-limited PNGs re-encoded in the browser.
+- JPEG structure output is capped at 4,096 segments and 16 quantization tables.
+- C2PA collections, metadata counts, metadata text, concurrency, active bytes, and execution time are bounded before crossing worker boundaries.
+- Hashes, metadata, C2PA, file structure, and Pixel Lab calculations still use the original local file; the displayed preview is not byte-for-byte identical.
+
+These controls reduce exposure to parser exploits and resource-exhaustion images. They are not an antivirus verdict and do not prove that a file is harmless.
+
+</details>
+
+<details>
+<summary><strong>Analysis references and local datasets</strong></summary>
+
+- Runtime EXIF parsing uses `exifr`; representative tests are independently checked with development-only `ExifReader`.
+- JPEG traversal, quantization extraction, end-of-image handling, and subsampling detection share one bounded parser.
+- C2PA Digital Source Type values are interpreted against a pinned local transform of the official IPTC vocabulary. Only IPTC-defined generative-AI concepts produce an AI provenance signal.
+- Camera sensor and crop-factor interpretation uses a locally bundled Lensfun-derived dataset with explicit attribution.
+
+Dataset refreshes are explicit development actions and require network access:
+
+```bash
+npm run update:lensfun
+npm run update:iptc-source-types
+```
+
+Normal image analysis uses only the committed local datasets.
+
+</details>
+
+## Project links
+
+- Found a vulnerability? Read the [Security Policy](SECURITY.md) and report it privately.
+- Want to help? Start with [Contributing](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
+- Looking for changes? See the [Changelog](CHANGELOG.md) and [latest release](https://github.com/eunjjang3/IFEX/releases/latest).
+- Reviewing dependencies or assets? See [Third-Party Notices](THIRD_PARTY_NOTICES.md).
 
 ## License
 
-IFEX source code is available under the [MIT License](LICENSE). Third-party dependencies and their assets remain subject to their respective licenses. Resolved versions are pinned by the lockfile; relevant license terms and attributions are recorded in package metadata and [Third-Party Notices](THIRD_PARTY_NOTICES.md).
+IFEX source code is available under the [MIT License](LICENSE). Third-party dependencies, fonts, datasets, and assets remain subject to their respective licenses.
 
-The bundled camera crop-factor dataset is adapted from Lensfun under CC BY-SA 3.0. The bundled IPTC Digital Source Type vocabulary is an attributed transform under CC BY 4.0. A generated production-dependency license bundle and the development-only ExifReader notice are also recorded in [Third-Party Notices](THIRD_PARTY_NOTICES.md).
+The camera crop-factor dataset is adapted from Lensfun under CC BY-SA 3.0. The bundled IPTC Digital Source Type vocabulary is an attributed transform under CC BY 4.0. Complete production dependency license text and development-only notices are recorded in [Third-Party Notices](THIRD_PARTY_NOTICES.md).
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [CHANGELOG.md](CHANGELOG.md) for project participation and release history.
+<div align="center">
+
+**Inspect locally. Interpret carefully. Share evidence responsibly.**
+
+</div>

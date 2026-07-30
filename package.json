@@ -23,7 +23,7 @@
     "typecheck": "tsc -b",
     "test": "vitest run",
     "verify": "npm run check:licenses && npm test && npm run lint && npm run check:desktop && npm run build && npm run check:build-env",
-    "check:desktop": "node --check electron/main.js && node --check electron/preload.cjs && node --check electron/urlPolicy.js && node --check scripts/run-desktop.mjs && node --check scripts/package-desktop.mjs",
+    "check:desktop": "node --check electron/main.js && node --check electron/preload.cjs && node --check electron/urlPolicy.js && node --check scripts/run-desktop.mjs && node --check scripts/package-desktop.mjs && node --check scripts/verify-release-version.mjs",
     "check:licenses": "node scripts/generate-production-licenses.mjs --check",
     "check:build-env": "node scripts/verify-build-env-allowlist.mjs",
     "generate:licenses": "node scripts/generate-production-licenses.mjs",

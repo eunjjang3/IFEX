@@ -2,6 +2,17 @@
 
 All notable IFEX changes are recorded here. The project follows semantic versioning once a version is tagged and released.
 
+## Unreleased
+
+### Added
+
+- Version-gated GitHub release automation for unsigned macOS and Windows archives, multi-platform GHCR images, checksums, and provenance attestations.
+- Repository screenshots and a product-focused README overview generated from the bundled local sample.
+
+### Changed
+
+- Normal CI now validates the sandboxed Electron entry points alongside the browser application.
+
 ## 0.1.0 - 2026-07-30
 
 ### Added
