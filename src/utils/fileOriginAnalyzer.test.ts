@@ -192,6 +192,7 @@ describe('analyzeFileOrigin', () => {
     });
     expect(report.jpeg).toMatchObject({ width: 32, height: 16, chromaSubsampling: '4:2:0' });
     expect(report.c2pa.state).toBe('absent');
+    expect(report.aigc.state).toBe('absent');
     expect(report.findings.map((finding) => finding.id)).toEqual([
       'file-identity',
       'metadata-inventory',
@@ -200,5 +201,27 @@ describe('analyzeFileOrigin', () => {
       'c2pa',
     ]);
     expect(Number.isNaN(Date.parse(report.generatedAt))).toBe(false);
+  });
+
+  it('promotes a valid GB 45438 AIGC declaration into provenance findings', async () => {
+    const file = new File([jpegBytes], 'declared.jpg', { type: 'image/jpeg' });
+    const encoded = JSON.stringify({
+      Label: '1',
+      ContentProducer: '001191330106MA2CFLDG4R10001',
+      ProduceID: 'produce-1',
+      ReservedCode1: 'K-proof',
+      ContentPropagator: '001191330106MA2CFLDG4R10001',
+      PropagateID: 'produce-1',
+      ReservedCode2: 'K-proof',
+    }).replace(/"/g, '&quot;');
+
+    const report = await analyzeFileOrigin(file, jpegBytes.slice().buffer as ArrayBuffer, { AIGC: { AIGC: encoded } }, false);
+
+    expect(report.aigc).toMatchObject({
+      state: 'declared',
+      declaration: 'generated',
+      provider: { id: 'provider.cn.tongyi-yunqi' },
+    });
+    expect(report.findings.some((finding) => finding.id === 'aigc-provenance')).toBe(true);
   });
 });

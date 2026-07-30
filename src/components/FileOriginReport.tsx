@@ -60,6 +60,19 @@ export function FileOriginReport({ photo }: FileOriginReportProps) {
   const [copied, setCopied] = useState(false);
   const [expertMode, setExpertMode] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const metadataAi = fileOrigin.aigc.state === 'declared' || fileOrigin.aigc.state === 'partial';
+  const aiGenerated = fileOrigin.c2pa.aiGenerated || fileOrigin.aigc.declaration === 'generated';
+  const aiAssisted = fileOrigin.c2pa.aiEdited;
+  const aiProvider = fileOrigin.c2pa.provider || fileOrigin.aigc.provider;
+  const aiLabel = aiGenerated
+    ? t('origin.declaredGenerated')
+    : aiAssisted
+      ? t('origin.declaredAssisted')
+      : fileOrigin.aigc.declaration === 'possibly-generated'
+        ? t('origin.declaredPossible')
+        : fileOrigin.aigc.declaration === 'suspected-generated'
+          ? t('origin.declaredSuspected')
+          : t('origin.noSignal');
 
   const copyHash = async () => {
     await navigator.clipboard.writeText(fileOrigin.sha256);
@@ -99,9 +112,12 @@ export function FileOriginReport({ photo }: FileOriginReportProps) {
         </div>
         <div className="p-3">
           <span className="font-sans text-[10px] uppercase text-muted-foreground">{t('origin.aiProvenance')}</span>
-          <strong className={`mt-1 block font-mono text-sm ${fileOrigin.c2pa.aiGenerated || fileOrigin.c2pa.aiEdited ? 'text-amber-400' : 'text-foreground'}`}>
-            {fileOrigin.c2pa.aiGenerated ? t('origin.declaredGenerated') : fileOrigin.c2pa.aiEdited ? t('origin.declaredAssisted') : t('origin.noSignal')}
+          <strong className={`mt-1 block font-mono text-sm ${aiGenerated || aiAssisted || metadataAi ? 'text-amber-400' : 'text-foreground'}`}>
+            {aiLabel}
           </strong>
+          <span className="mt-1 block truncate font-sans text-[11px] text-muted-foreground" title={aiProvider?.name}>
+            {aiProvider?.name || (metadataAi ? fileOrigin.aigc.standardName : t('origin.noProvider'))}
+          </span>
         </div>
       </div>
 

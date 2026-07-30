@@ -2,6 +2,7 @@ import wasmSrc from '@contentauth/c2pa-web/resources/c2pa.wasm?url';
 import type { ManifestAssertion, ManifestStore } from '@contentauth/c2pa-web';
 import digitalSourceVocabulary from '../data/iptcDigitalSourceTypes.json';
 import type { C2paReport } from '../types/forensics';
+import { identifyC2paProvider } from './aiProviderRegistry';
 
 let sdkPromise: Promise<import('@contentauth/c2pa-web').C2paSdk> | null = null;
 
@@ -94,22 +95,109 @@ function sourceTypesFromAssertion(assertion: ManifestAssertion, result: Set<stri
   }
 }
 
+interface C2paAiInspection extends Pick<C2paReport, 'aiGenerated' | 'aiEdited' | 'aiEvidenceOrigin'> {
+  providerSignals: string[];
+}
+
+function ingredientManifestValidated(value: unknown): boolean {
+  if (!value || typeof value !== 'object') return false;
+  const ingredient = value as Record<string, unknown>;
+  const results = ingredient.validation_results as Record<string, unknown> | undefined;
+  const activeManifest = results?.activeManifest as Record<string, unknown> | undefined;
+  if (activeManifest) {
+    const failures = Array.isArray(activeManifest.failure) ? activeManifest.failure : [];
+    const successes = Array.isArray(activeManifest.success) ? activeManifest.success : [];
+    return failures.length === 0 && successes.length > 0;
+  }
+
+  const statuses = ingredient.validation_status;
+  if (!Array.isArray(statuses) || statuses.length === 0) return false;
+  return statuses.every((status) => {
+    if (!status || typeof status !== 'object') return false;
+    return (status as Record<string, unknown>).success !== false;
+  });
+}
+
+function manifestProviderSignals(manifest: Record<string, unknown>): string[] {
+  const result: string[] = [];
+  if (typeof manifest.claim_generator === 'string') result.push(manifest.claim_generator);
+  if (Array.isArray(manifest.claim_generator_info)) {
+    for (const item of manifest.claim_generator_info.slice(0, C2PA_REPORT_LIMITS.collectionItems)) {
+      if (item && typeof item === 'object' && typeof (item as Record<string, unknown>).name === 'string') {
+        result.push((item as Record<string, unknown>).name as string);
+      }
+    }
+  }
+  const signature = manifest.signature_info;
+  if (signature && typeof signature === 'object') {
+    const record = signature as Record<string, unknown>;
+    if (typeof record.issuer === 'string') result.push(record.issuer);
+  }
+  return result;
+}
+
+function inspectC2paAiProvenance(
+  store: Pick<ManifestStore, 'active_manifest' | 'manifests'>,
+): C2paAiInspection {
+  const activeLabel = store.active_manifest || undefined;
+  if (!activeLabel || !store.manifests?.[activeLabel]) {
+    return { aiGenerated: false, aiEdited: false, providerSignals: [] };
+  }
+
+  const sourceTypes = new Set<string>();
+  const activeSourceTypes = new Set<string>();
+  const visited = new Set<string>();
+  const providerSignals: string[] = [];
+  const budget = { remaining: C2PA_REPORT_LIMITS.traversalNodes };
+
+  const visit = (label: string, active: boolean, depth: number) => {
+    if (visited.has(label) || budget.remaining <= 0 || depth > C2PA_REPORT_LIMITS.traversalDepth) return;
+    const manifest = store.manifests?.[label];
+    if (!manifest) return;
+    visited.add(label);
+    budget.remaining -= 1;
+    providerSignals.push(...manifestProviderSignals(manifest as unknown as Record<string, unknown>));
+
+    const localTypes = new Set<string>();
+    for (const assertion of (manifest.assertions || []).slice(0, C2PA_REPORT_LIMITS.collectionItems)) {
+      sourceTypesFromAssertion(assertion, localTypes, budget);
+    }
+    for (const sourceType of localTypes) {
+      sourceTypes.add(sourceType);
+      if (active) activeSourceTypes.add(sourceType);
+    }
+
+    for (const ingredient of (manifest.ingredients || []).slice(0, C2PA_REPORT_LIMITS.collectionItems)) {
+      if (ingredient.relationship !== 'parentOf' || !ingredient.active_manifest) continue;
+      if (!ingredientManifestValidated(ingredient)) continue;
+      visit(ingredient.active_manifest, false, depth + 1);
+    }
+  };
+
+  visit(activeLabel, true, 0);
+  const aiGenerated = [...sourceTypes].some((value) => AI_GENERATED_SOURCE_TYPES.has(value));
+  const aiEdited = [...sourceTypes].some((value) => AI_EDITED_SOURCE_TYPES.has(value));
+  const activeHasAi = [...activeSourceTypes].some((value) =>
+    AI_GENERATED_SOURCE_TYPES.has(value) || AI_EDITED_SOURCE_TYPES.has(value),
+  );
+
+  return {
+    aiGenerated,
+    aiEdited,
+    aiEvidenceOrigin: aiGenerated || aiEdited
+      ? activeHasAi ? 'active-manifest' : 'validated-parent-ingredient'
+      : undefined,
+    providerSignals,
+  };
+}
+
 export function detectActiveManifestAiProvenance(
   store: Pick<ManifestStore, 'active_manifest' | 'manifests'>,
 ): Pick<C2paReport, 'aiGenerated' | 'aiEdited'> {
-  const activeLabel = store.active_manifest || undefined;
-  const active = activeLabel ? store.manifests?.[activeLabel] : undefined;
-  if (!active) return { aiGenerated: false, aiEdited: false };
-
-  const sourceTypes = new Set<string>();
-  const budget = { remaining: C2PA_REPORT_LIMITS.traversalNodes };
-  for (const assertion of (active.assertions || []).slice(0, C2PA_REPORT_LIMITS.collectionItems)) {
-    sourceTypesFromAssertion(assertion, sourceTypes, budget);
-  }
-
+  const { aiGenerated, aiEdited } = inspectC2paAiProvenance(store);
   return {
-    aiGenerated: [...sourceTypes].some((value) => AI_GENERATED_SOURCE_TYPES.has(value)),
-    aiEdited: [...sourceTypes].some((value) => AI_EDITED_SOURCE_TYPES.has(value)),
+    aiGenerated,
+    aiEdited,
   };
 }
 
@@ -213,7 +301,8 @@ export function reportFromManifestStore(store: ManifestStore): C2paReport {
     assertionLabels.push(label);
   }
 
-  const { aiGenerated, aiEdited } = detectActiveManifestAiProvenance(store);
+  const { aiGenerated, aiEdited, aiEvidenceOrigin, providerSignals } = inspectC2paAiProvenance(store);
+  const provider = identifyC2paProvider([claimGenerator, signer, ...providerSignals]);
   const state = store.validation_state === 'Trusted'
     ? 'trusted'
     : store.validation_state === 'Valid'
@@ -231,6 +320,8 @@ export function reportFromManifestStore(store: ManifestStore): C2paReport {
     validationMessages,
     aiGenerated,
     aiEdited,
+    aiEvidenceOrigin,
+    provider,
     explanation: state === 'trusted'
       ? 'The manifest is structurally valid and its signer is trusted by the configured trust policy.'
       : state === 'valid'
