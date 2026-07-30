@@ -1,0 +1,70 @@
+IFEX Third-Party Notices
+
+Lensfun camera database
+
+The camera maker/model aliases and crop factors bundled with IFEX are an
+adapted subset of the Lensfun database:
+https://github.com/lensfun/lensfun/tree/master/data/db
+
+Changes: lens and calibration records were omitted; camera records were
+reduced to maker/model aliases and crop factor, sorted, and serialized as JSON
+for local browser lookup. The exact upstream revision is recorded in the
+generated dataset.
+
+The Lensfun database and this adapted database are licensed under the Creative
+Commons Attribution-ShareAlike 3.0 Unported license (CC BY-SA 3.0):
+https://creativecommons.org/licenses/by-sa/3.0/
+
+Full license text:
+/third-party/lensfun-CC-BY-SA-3.0.txt
+
+IFEX source code outside the adapted Lensfun database remains under the MIT
+License. No upstream endorsement is implied.
+
+
+IPTC Digital Source Type vocabulary
+
+IFEX includes an attributed transform of the IPTC Digital Source Type
+NewsCodes vocabulary:
+https://cv.iptc.org/newscodes/digitalsourcetype/?lang=en-GB&format=json
+
+Creator: IPTC (https://iptc.org/)
+Source revision: 2024-10-23T12:00:00+00:00
+Source SHA-256:
+1caaa5bb729d5b40fdfef599bc650bf1288e7cca4fe52b9bb4d65701da4fb1d6
+
+Changes: concepts were reduced to stable English identifiers, URIs, labels,
+definitions, modification dates, and retirement dates; output was sorted and
+serialized as JSON for local C2PA interpretation.
+
+The source and transformed vocabulary are licensed under Creative Commons
+Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+No upstream endorsement is implied.
+
+
+Direct runtime analysis libraries
+
+@contentauth/c2pa-web 0.13.1 - MIT
+https://github.com/contentauth/c2pa-js
+
+exifr 7.1.3 - MIT
+https://github.com/MikeKovarik/exifr
+
+file-type 21.3.4 - MIT
+https://github.com/sindresorhus/file-type
+
+Preserved production dependency license and notice texts:
+/third-party/dependency-licenses.txt
+
+This generated manifest covers the non-optional production dependency graph
+pinned in package-lock.json and is checked by CI.
+
+
+Development-only test dependency
+
+ExifReader 4.41.3 is used only as an independent EXIF test oracle and is not
+included in the production browser bundle. It is licensed under MPL-2.0:
+https://github.com/mattiasw/ExifReader
+https://www.mozilla.org/MPL/2.0/

@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--locale-font-serif);
+  --font-body: var(--locale-font-sans);
+  --font-sans: var(--locale-font-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-gold: var(--gold);
+  --color-gold-dim: var(--gold-dim);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+}
+
+:root {
+  --locale-font-sans: 'Inter Variable', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --locale-font-serif: 'Playfair Display Variable', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --background:       oklch(0.11 0.012 55);
+  --foreground:       oklch(0.89 0.018 75);
+  --card:             oklch(0.14 0.012 55);
+  --card-foreground:  oklch(0.89 0.018 75);
+  --popover:          oklch(0.14 0.012 55);
+  --popover-foreground: oklch(0.89 0.018 75);
+  --primary:          oklch(0.72 0.09 75);
+  --primary-foreground: oklch(0.11 0.012 55);
+  --secondary:        oklch(0.18 0.012 55);
+  --secondary-foreground: oklch(0.75 0.015 75);
+  --muted:            oklch(0.20 0.010 55);
+  --muted-foreground: oklch(0.60 0.020 75);
+  --accent:           oklch(0.72 0.09 75);
+  --accent-foreground: oklch(0.11 0.012 55);
+  --border:           oklch(1 0 0 / 10%);
+  --gold:             oklch(0.72 0.09 75);
+  --gold-dim:         oklch(0.55 0.07 75);
+  --danger:           oklch(0.60 0.20 25);
+  --warning:          oklch(0.75 0.15 70);
+  --success:          oklch(0.70 0.15 150);
+}
+
+html:lang(ko) {
+  --locale-font-sans: 'Pretendard Variable', Pretendard, 'Noto Sans KR', system-ui, sans-serif;
+  --locale-font-serif: 'Noto Serif KR Variable', 'Noto Serif KR', 'KoPubWorldBatang', serif;
+}
+
+html:lang(ja) {
+  --locale-font-sans: 'Noto Sans JP Variable', 'Noto Sans JP', system-ui, sans-serif;
+  --locale-font-serif: 'Shippori Mincho', 'Noto Serif JP', serif;
+}
+
+.app-chrome {
+  --locale-font-sans: 'Inter Variable', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --locale-font-serif: 'Playfair Display Variable', 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    border-radius: 0 !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--muted) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.25 0.015 55);
+    border-radius: 0 !important;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-dim);
+  }
+
+  html, body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom dark style for Leaflet maps */
+.leaflet-container {
+  background: #0f1015 !important;
+  font-family: var(--font-sans) !important;
+  border-radius: 0 !important;
+}
+
+.leaflet-tile {
+  filter: brightness(0.7) invert(1) contrast(1.2) hue-rotate(200deg) saturate(0.3);
+}
+
+.leaflet-control-zoom a {
+  background-color: oklch(0.16 0.012 55) !important;
+  color: oklch(0.89 0.018 75) !important;
+  border-color: oklch(1 0 0 / 12%) !important;
+  border-radius: 0 !important;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: oklch(0.16 0.012 55) !important;
+  color: oklch(0.89 0.018 75) !important;
+  border: 1px solid oklch(0.72 0.09 75 / 30%) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5) !important;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, oklch(0.14 0.012 55) 25%, oklch(0.20 0.015 65) 50%, oklch(0.14 0.012 55) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.icc-signature-help:hover .icc-signature-tooltip,
+.icc-signature-help:focus-within .icc-signature-tooltip {
+  display: block;
+}
