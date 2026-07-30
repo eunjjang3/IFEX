@@ -15,6 +15,7 @@ Inspect metadata leakage, file provenance, camera traces, JPEG structure, C2PA c
 </p>
 
 <p>
+  <a href="https://eunjjang3.github.io/IFEX/"><strong>Live demo</strong></a> ·
   <a href="#quick-start"><strong>Quick start</strong></a> ·
   <a href="#what-you-can-inspect"><strong>Features</strong></a> ·
   <a href="#privacy-model"><strong>Privacy</strong></a> ·
@@ -75,6 +76,10 @@ Pixel Lab renders diagnostic maps directly over the local preview:
 These are investigative leads, not proof of manipulation. The CFA view is a lightweight phase heuristic rather than the full Popescu–Farid EM detector, and the DCT view works from decoded pixels rather than original bitstream coefficients.
 
 ## Quick start
+
+### Live demo
+
+Open the **[hosted IFEX workspace](https://eunjjang3.github.io/IFEX/)** and choose an image or use the bundled local sample. Image analysis stays in browser memory; GitHub Pages serves the application files but does not receive the image being inspected. External map, geocoding, map-link, and reverse-search behavior remains opt-in as described in the [privacy model](#privacy-model).
 
 ### Browser development
 
