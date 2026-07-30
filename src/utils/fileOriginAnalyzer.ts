@@ -8,6 +8,7 @@ import { verifyC2pa } from './c2paVerifier';
 import { detectFileTypeFromBytes } from './fileSignature';
 import { parseJpegStructure } from './jpegStructure';
 import type { MetadataNamespaceCounts } from './metadataNamespaces';
+import { analyzeAigcMetadata } from './aigcMetadata';
 
 export { detectFileType, detectFileTypeFromBytes } from './fileSignature';
 export { parseJpegStructure } from './jpegStructure';
@@ -51,6 +52,7 @@ export async function analyzeFileOrigin(
   const fileType = await detectFileTypeFromBytes(file, bytes);
   const jpeg = parseJpegStructure(bytes);
   const metadata = collectMetadataInventory(rawTags, jpeg, hasThumbnail, namespaceCounts);
+  const aigc = analyzeAigcMetadata(rawTags);
   const digest = await crypto.subtle.digest('SHA-256', buffer);
   const sha256 = Array.from(new Uint8Array(digest)).map((byte) => byte.toString(16).padStart(2, '0')).join('');
   const c2pa = await verifyC2pa(file, fileType.actualMime);
@@ -66,6 +68,38 @@ export async function analyzeFileOrigin(
       : `The binary signature identifies ${fileType.formatName}, but its extension or declared MIME does not match.`,
     evidence: [`Magic bytes: ${fileType.signatureHex}`, `Extension: .${fileType.extension || '(none)'}`, `Declared MIME: ${fileType.declaredMime}`],
   }));
+
+  if (aigc.state === 'declared' || aigc.state === 'partial') {
+    const declarationSummary = aigc.declaration === 'generated'
+      ? 'The embedded metadata declares this content AI-generated or synthesized.'
+      : aigc.declaration === 'possibly-generated'
+        ? 'The embedded metadata declares this content possibly AI-generated or synthesized.'
+        : 'The embedded metadata declares this content suspected to be AI-generated or synthesized.';
+    findings.push(finding({
+      id: 'aigc-provenance',
+      state: 'observed',
+      confidence: aigc.state === 'declared' ? 'high' : 'medium',
+      title: 'AIGC provenance declaration',
+      summary: declarationSummary,
+      evidence: [
+        aigc.standardName || 'AIGC metadata',
+        `Label ${aigc.values?.label || 'unknown'}`,
+        aigc.provider ? `Provider: ${aigc.provider.name}` : `Producer: ${aigc.values?.contentProducer || 'unknown'}`,
+        aigc.values?.produceId ? `Produce ID: ${aigc.values.produceId}` : 'Produce ID unavailable',
+        aigc.integrity?.state === 'unverified' ? 'Integrity protection data present but not verified' : 'No integrity protection data',
+      ],
+      limitations: ['A metadata declaration can be copied, removed, or modified unless its integrity protection is independently verified.'],
+    }));
+  } else if (aigc.state === 'invalid') {
+    findings.push(finding({
+      id: 'aigc-metadata-invalid',
+      state: 'suspicious',
+      confidence: 'medium',
+      title: 'Malformed AIGC metadata',
+      summary: 'An AIGC-labelled metadata field was found but did not satisfy the minimum declaration structure.',
+      evidence: [`Malformed candidates: ${aigc.malformedCandidateCount || 1}`],
+    }));
+  }
 
   const metadataTotal = metadata.exif + metadata.iptc + metadata.xmp + metadata.icc;
   findings.push(finding({
@@ -99,16 +133,16 @@ export async function analyzeFileOrigin(
     confidence: c2pa.state === 'error' ? 'low' : 'high',
     title: 'Content Credentials',
     summary: c2pa.explanation,
-    evidence: [c2pa.activeManifest ? `Active manifest: ${c2pa.activeManifest}` : 'No active manifest', c2pa.claimGenerator ? `Claim generator: ${c2pa.claimGenerator}` : 'Claim generator unavailable', ...c2pa.validationMessages.slice(0, 3)],
+    evidence: [c2pa.activeManifest ? `Active manifest: ${c2pa.activeManifest}` : 'No active manifest', c2pa.claimGenerator ? `Claim generator: ${c2pa.claimGenerator}` : 'Claim generator unavailable', c2pa.provider ? `Provider: ${c2pa.provider.name}` : 'Provider not identified', ...c2pa.validationMessages.slice(0, 3)],
   }));
 
   if (c2pa.aiGenerated || c2pa.aiEdited) {
     findings.unshift(finding({
       id: 'ai-provenance', state: 'observed', confidence: c2pa.state === 'trusted' || c2pa.state === 'valid' ? 'high' : 'medium', title: 'AI provenance signal',
       summary: c2pa.aiGenerated ? 'Content Credentials declare trained algorithmic media.' : 'Content Credentials declare AI-assisted or algorithmically enhanced media.',
-      evidence: [c2pa.claimGenerator || 'C2PA digital source type', c2pa.state === 'trusted' ? 'Trusted manifest' : `${c2pa.state} manifest`],
+      evidence: [c2pa.claimGenerator || 'C2PA digital source type', c2pa.aiEvidenceOrigin === 'validated-parent-ingredient' ? 'AI declaration found in a validated parent ingredient' : 'AI declaration found in the active manifest', c2pa.state === 'trusted' ? 'Trusted manifest' : `${c2pa.state} manifest`],
     }));
   }
 
-  return { sha256, fileType, metadata, jpeg, c2pa, findings, generatedAt: new Date().toISOString() };
+  return { sha256, fileType, metadata, jpeg, c2pa, aigc, findings, generatedAt: new Date().toISOString() };
 }

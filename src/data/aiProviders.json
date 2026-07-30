@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "privacy": "Bundled static identifier rules only. No analyzed file data or user activity is collected or persisted.",
+  "providers": [
+    {
+      "id": "provider.google",
+      "name": "Google",
+      "nativeName": "Google LLC",
+      "vendorGroup": "Google",
+      "c2pa": {
+        "claimGeneratorIncludes": [
+          "Google C2PA",
+          "Google Generative AI"
+        ],
+        "signerIncludes": [
+          "Google LLC"
+        ]
+      }
+    },
+    {
+      "id": "provider.cn.tongyi-yunqi",
+      "name": "Tongyi Yunqi (Hangzhou) Information Technology Co., Ltd.",
+      "nativeName": "通义云启（杭州）信息技术有限公司",
+      "vendorGroup": "Alibaba Cloud / Tongyi",
+      "metadata": {
+        "unifiedSocialCreditCodes": [
+          "91330106MA2CFLDG4R"
+        ],
+        "producerCodeExact": [
+          "001191330106MA2CFLDG4R10001"
+        ],
+        "producerCodePrefixes": [
+          "001191330106MA2CFLDG4R1"
+        ],
+        "namespaceUris": [
+          "https://www.aliyun.com/"
+        ]
+      }
+    }
+  ]
+}
