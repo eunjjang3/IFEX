@@ -79,7 +79,7 @@ These are investigative leads, not proof of manipulation. The CFA view is a ligh
 
 ### Live demo
 
-Open the **[hosted IFEX workspace](https://eunjjang3.github.io/IFEX/)** and choose an image or use the bundled local sample. Image analysis stays in browser memory; GitHub Pages serves the application files but does not receive the image being inspected. External map, geocoding, map-link, and reverse-search behavior remains opt-in as described in the [privacy model](#privacy-model).
+Open the **[hosted IFEX workspace](https://eunjjang3.github.io/IFEX/)** and choose an image or use the bundled local sample. Image analysis stays in browser memory; GitHub Pages serves the application files but does not receive the image being inspected. Pages deployments are started manually, so merging to `main` does not publish a new hosted build. External map, geocoding, map-link, and reverse-search behavior remains opt-in as described in the [privacy model](#privacy-model).
 
 ### Browser development
 
