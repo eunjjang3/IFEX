@@ -39,7 +39,7 @@ Most online metadata tools begin with an upload. IFEX begins with a boundary: th
 - **Local-first by design** — analyzed files and metadata are not uploaded to an IFEX server.
 - **Evidence before verdicts** — findings explain what was observed and where the method stops.
 - **Deep JPEG inspection** — structure, quantization, subsampling, quality estimates, and diagnostic overlays.
-- **Provenance-aware** — C2PA Content Credentials and IPTC Digital Source Type semantics are inspected conservatively.
+- **Provenance-aware** — C2PA Content Credentials, validated parent-ingredient chains, IPTC Digital Source Types, and GB 45438-2025 AIGC declarations are inspected conservatively.
 - **Browser and desktop** — use the same sandboxed workspace on the web, macOS, or Windows.
 - **English · 한국어 · 日本語** — instant, persisted language switching with locally bundled typography.
 
@@ -49,7 +49,7 @@ If IFEX is useful to your investigations, research, or photography workflow, con
 
 | Surface | What IFEX shows |
 | --- | --- |
-| **File Origin** | Binary signature, extension/MIME consistency, SHA-256 identity, JPEG structure, processing traces, and C2PA signals |
+| **File Origin** | Binary signature, extension/MIME consistency, SHA-256 identity, JPEG structure, processing traces, C2PA signals, and supported AIGC metadata declarations |
 | **Leakage** | Metadata fields that may expose identity, device details, timestamps, software, thumbnails, or location |
 | **Camera Specs** | Camera and lens identity, serials, focal length, firmware, sensor evidence, crop factor, and JPEG quality estimate |
 | **GPS Map** | Embedded coordinates, opt-in OpenStreetMap tiles, opt-in reverse geocoding, and external map links |
@@ -79,7 +79,7 @@ These are investigative leads, not proof of manipulation. The CFA view is a ligh
 
 ### Live demo
 
-Open the **[hosted IFEX workspace](https://eunjjang3.github.io/IFEX/)** and choose an image or use the bundled local sample. Image analysis stays in browser memory; GitHub Pages serves the application files but does not receive the image being inspected. External map, geocoding, map-link, and reverse-search behavior remains opt-in as described in the [privacy model](#privacy-model).
+Open the **[hosted IFEX workspace](https://eunjjang3.github.io/IFEX/)** and choose an image or use the bundled local sample. Image analysis stays in browser memory; GitHub Pages serves the application files but does not receive the image being inspected. Pages deployments are started manually, so merging to `main` does not publish a new hosted build. External map, geocoding, map-link, and reverse-search behavior remains opt-in as described in the [privacy model](#privacy-model).
 
 ### Browser development
 
@@ -256,6 +256,8 @@ These controls reduce exposure to parser exploits and resource-exhaustion images
 - Runtime EXIF parsing uses `exifr`; representative tests are independently checked with development-only `ExifReader`.
 - JPEG traversal, quantization extraction, end-of-image handling, and subsampling detection share one bounded parser.
 - C2PA Digital Source Type values are interpreted against a pinned local transform of the official IPTC vocabulary. Only IPTC-defined generative-AI concepts produce an AI provenance signal.
+- AI provider attribution uses the bundled static `src/data/aiProviders.json` registry. It stores identifier rules only; analyzed files, metadata values, hashes, and user activity are never added to the registry or transmitted.
+- GB 45438-2025 AIGC metadata is treated as a provenance declaration. Provider-code matches and unverified integrity fields are reported separately from cryptographically validated C2PA evidence.
 - Camera sensor and crop-factor interpretation uses a locally bundled Lensfun-derived dataset with explicit attribution.
 
 Dataset refreshes are explicit development actions and require network access:

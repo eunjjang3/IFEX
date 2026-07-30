@@ -51,6 +51,41 @@ export interface JpegStructure {
 
 export type C2paState = 'valid' | 'trusted' | 'invalid' | 'absent' | 'unsupported' | 'error';
 
+export interface AiProviderAttribution {
+  id: string;
+  name: string;
+  nativeName?: string;
+  vendorGroup?: string;
+  confidence: 'low' | 'medium' | 'high';
+  matchedBy: string;
+}
+
+export interface AigcMetadataValues {
+  label?: string;
+  contentProducer?: string;
+  produceId?: string;
+  reservedCode1?: string;
+  contentPropagator?: string;
+  propagateId?: string;
+  reservedCode2?: string;
+}
+
+export interface AigcMetadataReport {
+  state: 'absent' | 'invalid' | 'partial' | 'declared';
+  standardId?: string;
+  standardName?: string;
+  declaration?: 'generated' | 'possibly-generated' | 'suspected-generated';
+  sourceKey?: string;
+  conformant?: boolean;
+  values?: AigcMetadataValues;
+  provider?: AiProviderAttribution;
+  integrity?: {
+    state: 'absent' | 'unverified';
+    reservedCodesEqual: boolean;
+  };
+  malformedCandidateCount?: number;
+}
+
 export interface C2paReport {
   state: C2paState;
   activeManifest?: string;
@@ -62,6 +97,8 @@ export interface C2paReport {
   validationMessages: string[];
   aiGenerated: boolean;
   aiEdited: boolean;
+  aiEvidenceOrigin?: 'active-manifest' | 'validated-parent-ingredient';
+  provider?: AiProviderAttribution;
   explanation: string;
 }
 
@@ -80,6 +117,7 @@ export interface FileOriginReport {
   metadata: MetadataInventory;
   jpeg?: JpegStructure;
   c2pa: C2paReport;
+  aigc: AigcMetadataReport;
   findings: ForensicFinding[];
   generatedAt: string;
 }

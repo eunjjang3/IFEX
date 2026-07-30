@@ -91,7 +91,10 @@ export const en = {
     aiProvenance: 'AI provenance',
     declaredGenerated: 'DECLARED AI-GENERATED',
     declaredAssisted: 'DECLARED AI-ASSISTED',
+    declaredPossible: 'POSSIBLY AI-GENERATED',
+    declaredSuspected: 'SUSPECTED AI-GENERATED',
     noSignal: 'NO SIGNAL FOUND',
+    noProvider: 'Provider not identified',
     fileIdentity: 'SHA-256 file identity',
     copySha: 'Copy SHA-256',
     findings: 'Evidence findings',
@@ -275,7 +278,7 @@ export const ko: LocaleShape<typeof en> = {
   },
   origin: {
     state: { observed: '관찰됨', consistent: '일치함', suspicious: '확인 필요', inconclusive: '데이터 없음', unsupported: '지원 안 함' },
-    showEvidence: '근거 보기', hideEvidence: '근거 닫기', evidence: '근거 데이터', title: '파일 출처', description: '파일 컨테이너, 메타데이터, 인코딩 구조 및 출처 신호.', reverseSearch: '역이미지 검색', binaryFormat: '바이너리 형식', signatureMatches: '파일 시그니처와 확장자가 일치함', identityMismatch: '파일 시그니처 불일치 감지', contentCredentials: 'Content Credentials', noVerifiedGenerator: '검증된 생성기 없음', aiProvenance: 'AI 출처', declaredGenerated: 'AI 생성으로 선언됨', declaredAssisted: 'AI 보조로 선언됨', noSignal: 'AI 생성 신호 미검출', fileIdentity: 'SHA-256 파일 식별자', copySha: 'SHA-256 복사', findings: '분석 결과', expertData: '기술 데이터', metadataNamespaces: '메타데이터 네임스페이스', jpegMarkerMap: 'JPEG 마커 맵', offset: '오프셋', marker: '마커', segment: '세그먼트', bytes: '바이트', quantizationTables: '양자화 테이블', table: '테이블 {{id}} · {{precision}}비트', aboutCredentials: 'Content Credentials 안내', preparingSearch: '역이미지 검색 준비 중…',
+    showEvidence: '근거 보기', hideEvidence: '근거 닫기', evidence: '근거 데이터', title: '파일 출처', description: '파일 컨테이너, 메타데이터, 인코딩 구조 및 출처 신호.', reverseSearch: '역이미지 검색', binaryFormat: '바이너리 형식', signatureMatches: '파일 시그니처와 확장자가 일치함', identityMismatch: '파일 시그니처 불일치 감지', contentCredentials: 'Content Credentials', noVerifiedGenerator: '검증된 생성기 없음', aiProvenance: 'AI 출처', declaredGenerated: 'AI 생성으로 선언됨', declaredAssisted: 'AI 보조로 선언됨', declaredPossible: 'AI 생성 가능성으로 선언됨', declaredSuspected: 'AI 생성 의심으로 선언됨', noSignal: 'AI 생성 신호 미검출', noProvider: '제공자 식별 안 됨', fileIdentity: 'SHA-256 파일 식별자', copySha: 'SHA-256 복사', findings: '분석 결과', expertData: '기술 데이터', metadataNamespaces: '메타데이터 네임스페이스', jpegMarkerMap: 'JPEG 마커 맵', offset: '오프셋', marker: '마커', segment: '세그먼트', bytes: '바이트', quantizationTables: '양자화 테이블', table: '테이블 {{id}} · {{precision}}비트', aboutCredentials: 'Content Credentials 안내', preparingSearch: '역이미지 검색 준비 중…',
   },
   pixel: {
     title: '픽셀 랩', description: '픽셀 레벨 진단 오버레이 맵.', jpegRequired: '{{name}}은(는) JPEG 형식에서만 지원됩니다', overlayOpacity: '오버레이 불투명도', status: { idle: '대기', analyzing: '분석 중', ready: '완료', unsupported: '지원 안 함', error: '오류' },
@@ -308,7 +311,7 @@ export const ja: LocaleShape<typeof en> = {
   },
   origin: {
     state: { observed: '検出', consistent: '一致', suspicious: '要確認', inconclusive: 'データなし', unsupported: '非対応' },
-    showEvidence: '根拠を表示', hideEvidence: '根拠を閉じる', evidence: '根拠データ', title: 'ファイル構造・由来', description: 'ファイルコンテナ、メタデータ、エンコード構造、来歴信号。', reverseSearch: '逆画像検索', binaryFormat: 'バイナリ形式', signatureMatches: 'マジックバイトと拡張子が一致', identityMismatch: 'ファイルシグネチャの不一致を検出', contentCredentials: 'Content Credentials', noVerifiedGenerator: '検証済み生成元なし', aiProvenance: 'AI来歴', declaredGenerated: 'AI生成として宣言済み', declaredAssisted: 'AI補助として宣言済み', noSignal: 'AI生成シグナル未検出', fileIdentity: 'SHA-256 ハッシュ値', copySha: 'SHA-256をコピー', findings: '解析結果', expertData: '技術データ', metadataNamespaces: 'メタデータ名前空間', jpegMarkerMap: 'JPEGマーカーマップ', offset: 'オフセット', marker: 'マーカー', segment: 'セグメント', bytes: 'バイト', quantizationTables: '量子化テーブル', table: 'テーブル {{id}} · {{precision}}ビット', aboutCredentials: 'Content Credentialsについて', preparingSearch: '画像検索を準備中…',
+    showEvidence: '根拠を表示', hideEvidence: '根拠を閉じる', evidence: '根拠データ', title: 'ファイル構造・由来', description: 'ファイルコンテナ、メタデータ、エンコード構造、来歴信号。', reverseSearch: '逆画像検索', binaryFormat: 'バイナリ形式', signatureMatches: 'マジックバイトと拡張子が一致', identityMismatch: 'ファイルシグネチャの不一致を検出', contentCredentials: 'Content Credentials', noVerifiedGenerator: '検証済み生成元なし', aiProvenance: 'AI来歴', declaredGenerated: 'AI生成として宣言済み', declaredAssisted: 'AI補助として宣言済み', declaredPossible: 'AI生成の可能性として宣言', declaredSuspected: 'AI生成の疑いとして宣言', noSignal: 'AI生成シグナル未検出', noProvider: '提供者を特定できません', fileIdentity: 'SHA-256 ハッシュ値', copySha: 'SHA-256をコピー', findings: '解析結果', expertData: '技術データ', metadataNamespaces: 'メタデータ名前空間', jpegMarkerMap: 'JPEGマーカーマップ', offset: 'オフセット', marker: 'マーカー', segment: 'セグメント', bytes: 'バイト', quantizationTables: '量子化テーブル', table: 'テーブル {{id}} · {{precision}}ビット', aboutCredentials: 'Content Credentialsについて', preparingSearch: '画像検索を準備中…',
   },
   pixel: {
     title: 'ピクセルラボ', description: 'ピクセルレベル診断オーバーレイマップ。', jpegRequired: '{{name}}はJPEG形式のみ対応しています', overlayOpacity: '不透明度', status: { idle: '待機', analyzing: '解析中', ready: '完了', unsupported: '非対応', error: 'エラー' },

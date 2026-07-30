@@ -23,7 +23,7 @@ describe('detectActiveManifestAiProvenance', () => {
     expect(result).toEqual({ aiGenerated: true, aiEdited: false });
   });
 
-  it('ignores AI declarations that exist only in an inactive manifest or ingredient', () => {
+  it('ignores AI declarations in an unvalidated parent or arbitrary inactive manifest', () => {
     const result = detectActiveManifestAiProvenance({
       active_manifest: 'active',
       manifests: {
@@ -33,6 +33,59 @@ describe('detectActiveManifestAiProvenance', () => {
         },
         inactive: {
           assertions: [{ label: 'c2pa.actions', data: { actions: [{ action: 'c2pa.created', digitalSourceType: trainedMedia }] } }],
+        },
+      },
+    });
+
+    expect(result).toEqual({ aiGenerated: false, aiEdited: false });
+  });
+
+  it('follows a cryptographically validated parent ingredient declaration', () => {
+    const result = detectActiveManifestAiProvenance({
+      active_manifest: 'active',
+      manifests: {
+        active: {
+          ingredients: [{
+            relationship: 'parentOf',
+            active_manifest: 'generated-parent',
+            validation_results: {
+              activeManifest: {
+                success: [{ code: 'claimSignature.validated' }],
+                informational: [],
+                failure: [],
+              },
+            },
+          }],
+          assertions: [{ label: 'c2pa.actions', data: { actions: [{ action: 'c2pa.opened' }] } }],
+        },
+        'generated-parent': {
+          assertions: [{ label: 'c2pa.actions.v2', data: { actions: [{ action: 'c2pa.created', digitalSourceType: trainedMedia }] } }],
+        },
+      },
+    });
+
+    expect(result).toEqual({ aiGenerated: true, aiEdited: false });
+  });
+
+  it('rejects a parent ingredient whose validation results contain a failure', () => {
+    const result = detectActiveManifestAiProvenance({
+      active_manifest: 'active',
+      manifests: {
+        active: {
+          ingredients: [{
+            relationship: 'parentOf',
+            active_manifest: 'generated-parent',
+            validation_results: {
+              activeManifest: {
+                success: [{ code: 'claimSignature.validated' }],
+                informational: [],
+                failure: [{ code: 'assertion.hashedURI.mismatch' }],
+              },
+            },
+          }],
+        },
+        'generated-parent': {
+          assertions: [{ label: 'c2pa.actions', data: { actions: [{ digitalSourceType: trainedMedia }] } }],
         },
       },
     });
@@ -135,6 +188,22 @@ describe('detectActiveManifestAiProvenance', () => {
 });
 
 describe('reportFromManifestStore', () => {
+  it('attributes a Google C2PA claim through the local provider registry', () => {
+    const report = reportFromManifestStore({
+      active_manifest: 'active',
+      validation_state: 'Trusted',
+      manifests: {
+        active: {
+          claim_generator_info: [{ name: 'Google C2PA Core Generator Library' }],
+          assertions: [{ label: 'c2pa.actions.v2', data: { actions: [{ digitalSourceType: trainedMedia }] } }],
+        },
+      },
+    });
+
+    expect(report.provider).toMatchObject({ id: 'provider.google', confidence: 'high' });
+    expect(report.aiEvidenceOrigin).toBe('active-manifest');
+  });
+
   it('bounds attacker-controlled C2PA collections and text before Worker transfer', () => {
     const activeLabel = 'active';
     const report = reportFromManifestStore({
