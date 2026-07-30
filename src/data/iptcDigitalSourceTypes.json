@@ -1,0 +1,153 @@
+{
+  "source": "https://cv.iptc.org/newscodes/digitalsourcetype/?lang=en-GB&format=json",
+  "sourceSha256": "1caaa5bb729d5b40fdfef599bc650bf1288e7cca4fe52b9bb4d65701da4fb1d6",
+  "schemeUri": "http://cv.iptc.org/newscodes/digitalsourcetype/",
+  "revision": "2024-10-23T12:00:00+00:00",
+  "license": "CC BY 4.0",
+  "transformed": "IPTC Digital Source Type concepts reduced to stable English identifiers and definitions for local C2PA interpretation.",
+  "concepts": [
+    {
+      "id": "algorithmicallyEnhanced",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/algorithmicallyEnhanced",
+      "label": "Algorithmically-altered media",
+      "definition": "Modification or correction by algorithm without changing the main content of the media, initiated or configured by a human, such as sharpening or applying noise reduction",
+      "modified": "2024-10-23T12:00:00+00:00"
+    },
+    {
+      "id": "algorithmicMedia",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/algorithmicMedia",
+      "label": "Pure algorithmic media",
+      "definition": "Media created purely by an algorithm not based on any sampled training data, e.g. an image created by software using a mathematical formula",
+      "modified": "2022-06-14T12:00:00+00:00"
+    },
+    {
+      "id": "composite",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/composite",
+      "label": "Composite of elements",
+      "definition": "Mix or composite of several elements, any of which may or may not be generative AI",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "compositeCapture",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/compositeCapture",
+      "label": "Composite of captured elements",
+      "definition": "Mix or composite of several elements that are all captures of real life",
+      "modified": "2022-06-14T12:00:00+00:00"
+    },
+    {
+      "id": "compositeSynthetic",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/compositeSynthetic",
+      "label": "Composite including generative AI elements",
+      "definition": "Mix or composite of several elements, at least one of which is Generative AI",
+      "modified": "2022-06-14T12:00:00+00:00"
+    },
+    {
+      "id": "compositeWithTrainedAlgorithmicMedia",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/compositeWithTrainedAlgorithmicMedia",
+      "label": "Edited using Generative AI",
+      "definition": "Augmentation, correction or enhancement using a Generative AI model, such as with inpainting or outpainting operations",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "computationalCapture",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/computationalCapture",
+      "label": "Multi-frame computational capture sampled from real life",
+      "definition": "The media is the result of capturing multiple frames from a real-life source using a digital camera or digital recording device, then automatically merging them into a single frame using digital signal processing techniques and/or non-generative AI. Includes High Dynamic Range (HDR) processing common in smartphone camera apps.",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "dataDrivenMedia",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/dataDrivenMedia",
+      "label": "Data-driven media",
+      "definition": "Digital media representation of data via human programming or creativity",
+      "modified": "2022-06-14T12:00:00+00:00"
+    },
+    {
+      "id": "digitalArt",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalArt",
+      "label": "Digital art",
+      "definition": "Media created by a human using digital tools",
+      "modified": "2022-06-14T12:00:00+00:00",
+      "retired": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "digitalCapture",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture",
+      "label": "Digital capture sampled from real life",
+      "definition": "The media was captured from a real-life source using a digital camera or digital recording device",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "digitalCreation",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalCreation",
+      "label": "Digital creation",
+      "definition": "Media created by a human using non-generative tools",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "humanEdits",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/humanEdits",
+      "label": "Human-edited media",
+      "definition": "Augmentation, correction or enhancement by one or more humans using non-generative tools",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "minorHumanEdits",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/minorHumanEdits",
+      "label": "Original media with minor human edits",
+      "definition": "Minor augmentation or correction by a human, such as a digitally-retouched photo used in a magazine",
+      "modified": "2024-09-17T12:00:00+00:00",
+      "retired": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "negativeFilm",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/negativeFilm",
+      "label": "Digitised from a transparent negative",
+      "definition": "The media was digitised from a negative on film or other transparent medium",
+      "modified": "2024-09-26T12:00:00+00:00"
+    },
+    {
+      "id": "positiveFilm",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/positiveFilm",
+      "label": "Digitised from a transparent positive",
+      "definition": "The media was digitised from a positive on a transparency or other transparent medium",
+      "modified": "2024-09-26T12:00:00+00:00"
+    },
+    {
+      "id": "print",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/print",
+      "label": "Digitised from a non-transparent medium",
+      "definition": "The media was digitised from a non-transparent medium such as a photographic print",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "screenCapture",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/screenCapture",
+      "label": "Screen capture",
+      "definition": "A capture of the contents of the screen of a computer or mobile device",
+      "modified": "2024-09-17T12:00:00+00:00"
+    },
+    {
+      "id": "softwareImage",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/softwareImage",
+      "label": "Created by software",
+      "definition": "The digital image was created by computer software",
+      "modified": "2022-06-14T12:00:00+00:00",
+      "retired": "2022-06-14T12:00:00+00:00"
+    },
+    {
+      "id": "trainedAlgorithmicMedia",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+      "label": "Created using Generative AI",
+      "definition": "Digital media created algorithmically using an Artificial Intelligence model trained on captured content",
+      "modified": "2024-10-23T12:00:00+00:00"
+    },
+    {
+      "id": "virtualRecording",
+      "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/virtualRecording",
+      "label": "Virtual event recording",
+      "definition": "Live recording of virtual event based on Generative AI and/or captured elements",
+      "modified": "2024-09-17T12:00:00+00:00"
+    }
+  ]
+}

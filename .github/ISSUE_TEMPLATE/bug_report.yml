@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible IFEX defect that is not a security vulnerability.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach private images, unredacted metadata, malicious files, or vulnerability details. Follow SECURITY.md for security reports.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: IFEX commit or version
+      placeholder: git commit hash or release version
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment
+      options:
+        - Local Vite development server
+        - Docker or Docker Compose
+        - Other static hosting
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and operating system
+      placeholder: Firefox 128 on Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs or additional context
+      description: Remove file contents, personal metadata, local paths, and secrets before pasting.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: This report contains no vulnerability details, malicious sample, secret, or private image.
+          required: true

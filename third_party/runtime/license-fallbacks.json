@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "packages": {
+    "@tokenizer/token@0.3.0": {
+      "path": "third_party/runtime/license-fallbacks/tokenizer-token-0.3.0.txt",
+      "source": "The Licence section in the upstream README at npm gitHead e068a455370090f44c757946b8571bb3fb1f117e"
+    },
+    "highgain@0.1.0": {
+      "path": "third_party/runtime/license-fallbacks/highgain-0.1.0.txt",
+      "source": "ISC identifier and Eli Mensch author attribution in the published npm package metadata; canonical ISC permission and disclaimer text"
+    },
+    "pretendard@1.3.9": {
+      "path": "third_party/runtime/license-fallbacks/pretendard-1.3.9.txt",
+      "source": "LICENSE.txt bundled under dist/ in the published pretendard@1.3.9 npm package"
+    },
+    "ts-deepmerge@8.0.0": {
+      "path": "third_party/runtime/license-fallbacks/ts-deepmerge-8.0.0.txt",
+      "source": "ISC identifier and Raice Hannay author attribution in the published npm package metadata; canonical ISC permission and disclaimer text"
+    }
+  }
+}

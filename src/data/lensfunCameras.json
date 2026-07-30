@@ -1,0 +1,7960 @@
+{
+  "source": "https://github.com/lensfun/lensfun/tree/698a39eea69be00f4f25b6da6c1ad34b1f162b50/data/db",
+  "revision": "698a39eea69be00f4f25b6da6c1ad34b1f162b50",
+  "license": "CC BY-SA 3.0",
+  "transformed": "Lensfun camera XML entries reduced to maker/model aliases and crop factor for IFEX.",
+  "cameras": [
+    {
+      "maker": "AEE DV",
+      "model": "AEE DV",
+      "cropFactor": 6,
+      "makerAliases": [
+        "AEE"
+      ],
+      "modelAliases": [
+        "AEE MagiCam SD19 & compatibles"
+      ]
+    },
+    {
+      "maker": "Apple",
+      "model": "iPhone XS",
+      "cropFactor": 6.118
+    },
+    {
+      "maker": "Apple",
+      "model": "iPhone XS (tele)",
+      "cropFactor": 8.667
+    },
+    {
+      "maker": "Asahi Optical Co.,Ltd",
+      "model": "Pentax Optio 430",
+      "cropFactor": 4.85,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 430"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "35mm film: full frame",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 30",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXUS 30"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 40",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXUS 40"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 400",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "IXUS 400"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 430",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "IXUS 430"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 50",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXUS 50"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 500",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "IXUS 500"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 55",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXUS 55"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 70",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXUS 70"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 700",
+      "cropFactor": 4.8,
+      "modelAliases": [
+        "IXUS 700"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 750",
+      "cropFactor": 4.8,
+      "modelAliases": [
+        "IXUS 750"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 80 IS",
+      "cropFactor": 6.02,
+      "modelAliases": [
+        "IXUS 80 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS 95 IS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "IXUS 95 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS i",
+      "cropFactor": 6.144,
+      "modelAliases": [
+        "IXUS i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS II",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "IXUS II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon DIGITAL IXUS v2",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "IXUS v2"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 1000D",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS 1000D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 100D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 100D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 10D",
+      "cropFactor": 1.587,
+      "modelAliases": [
+        "EOS 10D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 1100D",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS 1100D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 1200D",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS 1200D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 1300D",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS 1300D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 2000D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 2000D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 200D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 200D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 200D II",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 200D II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 20D",
+      "cropFactor": 1.6,
+      "modelAliases": [
+        "EOS 20D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 250D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 250D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 300D DIGITAL",
+      "cropFactor": 1.587,
+      "modelAliases": [
+        "EOS 300D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 30D",
+      "cropFactor": 1.6,
+      "modelAliases": [
+        "EOS 30D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 350D DIGITAL",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS 350D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 4000D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 4000D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 400D DIGITAL",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS 400D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 40D",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS 40D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 450D",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS 450D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 500D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 500D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 50D",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS 50D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 550D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 550D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 5D",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS 5D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 5D Mark II",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS 5D Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 5D Mark III",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS 5D Mark III"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 5D Mark IV",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS 5D Mark IV"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 5DS",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS 5DS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 5DS R",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS 5DS R"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 600D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 600D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 60D",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS 60D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 650D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 650D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 6D",
+      "cropFactor": 1.005,
+      "modelAliases": [
+        "EOS 6D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 6D Mark II",
+      "cropFactor": 1.005,
+      "modelAliases": [
+        "EOS 6D Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 700D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 700D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 70D",
+      "cropFactor": 1.6,
+      "modelAliases": [
+        "EOS 70D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 750D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 750D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 760D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 760D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 77D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 77D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 7D",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS 7D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 7D Mark II",
+      "cropFactor": 1.605,
+      "modelAliases": [
+        "EOS 7D Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 8000D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 8000D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 800D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 800D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 80D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 80D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 850D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 850D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 9000D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 9000D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS 90D",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS 90D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS D30",
+      "cropFactor": 1.587,
+      "modelAliases": [
+        "EOS D30"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS D60",
+      "cropFactor": 1.587,
+      "modelAliases": [
+        "EOS D60"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS DIGITAL REBEL",
+      "cropFactor": 1.587,
+      "modelAliases": [
+        "EOS Digital REBEL"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS DIGITAL REBEL XS",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Digital Rebel XS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS DIGITAL REBEL XSi",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Digital Rebel XSi"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS DIGITAL REBEL XT",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Digital Rebel XT"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS DIGITAL REBEL XTi",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Digital Rebel XTi"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Hi",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS Hi"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss Digital",
+      "cropFactor": 1.587,
+      "modelAliases": [
+        "EOS Kiss Digital"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss Digital F",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Kiss Digital F"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss Digital N",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Kiss Digital N"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss Digital X",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Kiss Digital X"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss Digital X2",
+      "cropFactor": 1.622,
+      "modelAliases": [
+        "EOS Kiss Digital X2"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS KISS M",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS KISS M"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X10i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X10i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X3",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X3"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X4",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X4"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X5",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X5"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X50",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS Kiss X50"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X6i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X6i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X7",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X7"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X70",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS Kiss X70"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X7i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X7i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X8i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X8i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X9",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X9"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X90",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X90"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Kiss X9i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Kiss X9i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M10",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M10"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M100",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M100"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M2",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M2"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M200",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M200"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M3",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M3"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M5",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M5"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M50",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M50"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M50m2",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M50 Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M6",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M6"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS M6 Mark II",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS M6 Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R1",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R1"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R10",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS R10"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R100",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS R100"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R3"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R5",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R5"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R5 C",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R5 C"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R50",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS R50"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R50 V",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS R50 V"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R5m2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R5 Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R6",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R6"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R6 Mark III",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R6 Mark III"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R6 V",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R6 V"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R6m2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R6 Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R7",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS R7"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS R8",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS R8"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL SL1",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel SL1"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL SL2",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel SL2"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL SL3",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel SL3"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Rebel T100",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T100"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T1i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T1i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T2i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T2i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T3",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS Rebel T3"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T3i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T3i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T4i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T4i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T5",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS Rebel T5"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T5i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T5i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Rebel T6",
+      "cropFactor": 1.62,
+      "modelAliases": [
+        "EOS Rebel T6"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Rebel T6i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T6i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Rebel T6s",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T6s"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Rebel T7",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T7"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS REBEL T7i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T7i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS Rebel T8i",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "EOS Rebel T8i"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS RP",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS RP"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D",
+      "cropFactor": 1.255,
+      "modelAliases": [
+        "EOS-1D"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D Mark II",
+      "cropFactor": 1.255,
+      "modelAliases": [
+        "EOS-1D Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D Mark II N",
+      "cropFactor": 1.255,
+      "modelAliases": [
+        "EOS-1D Mark II N"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D Mark III",
+      "cropFactor": 1.282,
+      "modelAliases": [
+        "EOS-1D Mark III"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D Mark IV",
+      "cropFactor": 1.29,
+      "modelAliases": [
+        "EOS-1D Mark IV"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D X",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS-1D X"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1D X Mark II",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS-1D X Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1Ds",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS-1Ds"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1Ds Mark II",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS-1Ds Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon EOS-1Ds Mark III",
+      "cropFactor": 1,
+      "modelAliases": [
+        "EOS-1Ds Mark III"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXUS 125 HS",
+      "cropFactor": 5.58,
+      "modelAliases": [
+        "IXUS 125 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXUS 220 HS",
+      "cropFactor": 5.58,
+      "modelAliases": [
+        "IXUS 220 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY 220F",
+      "cropFactor": 5.58,
+      "modelAliases": [
+        "IXY 220F"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 200a",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "IXY 200a"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 30",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "IXY 30"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 40",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXY 40"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 400",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "IXY 400"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 450",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "IXY 450"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 50",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXY 50"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 500",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "IXY 500"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon IXY DIGITAL 55",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "IXY 55"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A10",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A10"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A1200",
+      "cropFactor": 5.61,
+      "modelAliases": [
+        "PowerShot A1200"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A20",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A20"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A30",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A30"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A40",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A40"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A4000 IS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot A4000 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A490",
+      "cropFactor": 5.39,
+      "modelAliases": [
+        "PowerShot A490"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A495",
+      "cropFactor": 5.39,
+      "modelAliases": [
+        "PowerShot A495"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A510",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "PowerShot A510"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A520",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "PowerShot A520"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A60",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A60"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A610",
+      "cropFactor": 4.8,
+      "modelAliases": [
+        "PowerShot A610"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A620",
+      "cropFactor": 4.8,
+      "modelAliases": [
+        "PowerShot A620"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A640",
+      "cropFactor": 4.79,
+      "modelAliases": [
+        "PowerShot A640"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A650 IS",
+      "cropFactor": 4.67712,
+      "modelAliases": [
+        "PowerShot A650 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A70",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A70"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A720 IS",
+      "cropFactor": 6.03,
+      "modelAliases": [
+        "PowerShot A720 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A75",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A75"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A80",
+      "cropFactor": 4.85,
+      "modelAliases": [
+        "PowerShot A80"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A85",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot A85"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot A95",
+      "cropFactor": 4.85,
+      "modelAliases": [
+        "PowerShot A95"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot ELPH 110 HS",
+      "cropFactor": 5.58,
+      "modelAliases": [
+        "PowerShot ELPH 110 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G1",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot G1"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G1 X",
+      "cropFactor": 1.85,
+      "modelAliases": [
+        "PowerShot G1 X"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G1 X Mark II",
+      "cropFactor": 1.93,
+      "modelAliases": [
+        "PowerShot G1 X Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G1 X Mark III",
+      "cropFactor": 1.613,
+      "modelAliases": [
+        "PowerShot G1 X Mark III"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G10",
+      "cropFactor": 4.605,
+      "modelAliases": [
+        "PowerShot G10"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G11",
+      "cropFactor": 4.554,
+      "modelAliases": [
+        "PowerShot G11"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G12",
+      "cropFactor": 4.63,
+      "modelAliases": [
+        "PowerShot G12"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G15",
+      "cropFactor": 4.65,
+      "modelAliases": [
+        "PowerShot G15"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G16",
+      "cropFactor": 4.67,
+      "modelAliases": [
+        "PowerShot G16"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G2",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot G2"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G3",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot G3"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G3 X",
+      "cropFactor": 2.727,
+      "modelAliases": [
+        "PowerShot G3 X (3:2)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G5",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot G5"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G5 X",
+      "cropFactor": 2.72,
+      "modelAliases": [
+        "PowerShot G5 X (3:2)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G5 X 16:9",
+      "cropFactor": 2.85,
+      "modelAliases": [
+        "PowerShot G5 X (16:9)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G5 X 4:3",
+      "cropFactor": 2.94,
+      "modelAliases": [
+        "PowerShot G5 X (4:3)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G5 X Mark II",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "PowerShot G5 X Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G6",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot G6"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot G7"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X",
+      "cropFactor": 2.72,
+      "modelAliases": [
+        "PowerShot G7 X (3:2)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X 16:9",
+      "cropFactor": 2.85,
+      "modelAliases": [
+        "PowerShot G7 X (16:9)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X 4:3",
+      "cropFactor": 2.94,
+      "modelAliases": [
+        "PowerShot G7 X (4:3)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X Mark II",
+      "cropFactor": 2.72,
+      "modelAliases": [
+        "PowerShot G7 X Mark II (3:2)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X Mark II 16:9",
+      "cropFactor": 2.85,
+      "modelAliases": [
+        "PowerShot G7 X Mark II (16:9)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X Mark II 4:3",
+      "cropFactor": 2.94,
+      "modelAliases": [
+        "PowerShot G7 X Mark II (4:3)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G7 X Mark III",
+      "cropFactor": 2.72,
+      "modelAliases": [
+        "PowerShot G7 X Mark III (3:2)"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G9",
+      "cropFactor": 4.605,
+      "modelAliases": [
+        "PowerShot G9"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G9 X",
+      "cropFactor": 2.72,
+      "modelAliases": [
+        "PowerShot G9 X"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot G9 X Mark II",
+      "cropFactor": 2.72,
+      "modelAliases": [
+        "PowerShot G9 X Mark II"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot Pro1",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "PowerShot Pro1"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot Pro70",
+      "cropFactor": 5.47,
+      "modelAliases": [
+        "PowerShot Pro70"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot Pro90 IS",
+      "cropFactor": 5.28,
+      "modelAliases": [
+        "PowerShot Pro90 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S1 IS",
+      "cropFactor": 6.56,
+      "modelAliases": [
+        "PowerShot S1 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S100",
+      "cropFactor": 4.62,
+      "modelAliases": [
+        "PowerShot S100"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S110",
+      "cropFactor": 4.62,
+      "modelAliases": [
+        "PowerShot S110"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S120",
+      "cropFactor": 4.62,
+      "modelAliases": [
+        "PowerShot S120"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S2 IS",
+      "cropFactor": 6,
+      "modelAliases": [
+        "PowerShot S2 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S200",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot S200"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S30",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S30"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S40",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S40"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S400",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S400"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S410",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S410"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S45",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S45"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S5 IS",
+      "cropFactor": 6,
+      "modelAliases": [
+        "PowerShot S5 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S50",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S50"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S500",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S500"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S60",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S60"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S70",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S70"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S80",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "PowerShot S80"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S90",
+      "cropFactor": 4.67,
+      "modelAliases": [
+        "PowerShot S90"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot S95",
+      "cropFactor": 4.67,
+      "modelAliases": [
+        "PowerShot S95"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD10",
+      "cropFactor": 6.144,
+      "modelAliases": [
+        "PowerShot SD10"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD100",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot SD100"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD110",
+      "cropFactor": 6.5,
+      "modelAliases": [
+        "PowerShot SD110"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD1100 IS",
+      "cropFactor": 6.02,
+      "modelAliases": [
+        "PowerShot SD1100 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD200",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "PowerShot SD200"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD300",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "PowerShot SD300"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD400",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "PowerShot SD400"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD450",
+      "cropFactor": 6.05,
+      "modelAliases": [
+        "PowerShot SD450"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD500",
+      "cropFactor": 4.8,
+      "modelAliases": [
+        "PowerShot SD500"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD550",
+      "cropFactor": 4.8,
+      "modelAliases": [
+        "PowerShot SD550"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SD950 IS",
+      "cropFactor": 4.7,
+      "modelAliases": [
+        "PowerShot SD950 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX1 IS",
+      "cropFactor": 5.5,
+      "modelAliases": [
+        "PowerShot SX1 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX10 IS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot SX10 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX130 IS",
+      "cropFactor": 5.62,
+      "modelAliases": [
+        "PowerShot SX130 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX150 IS",
+      "cropFactor": 5.62,
+      "modelAliases": [
+        "PowerShot SX150 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX160 IS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot SX160 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX220 HS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot SX220 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX230 HS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot SX230 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX240 HS",
+      "cropFactor": 5.56,
+      "modelAliases": [
+        "PowerShot SX240 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX260 HS",
+      "cropFactor": 5.56,
+      "modelAliases": [
+        "PowerShot SX260 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX30 IS",
+      "cropFactor": 5.581,
+      "modelAliases": [
+        "PowerShot SX30 IS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX50 HS",
+      "cropFactor": 5.61,
+      "modelAliases": [
+        "PowerShot SX50 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX510 HS",
+      "cropFactor": 5.58,
+      "modelAliases": [
+        "PowerShot SX510 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX60 HS",
+      "cropFactor": 5.61,
+      "modelAliases": [
+        "PowerShot SX60 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX700 HS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot SX700 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "Canon PowerShot SX710 HS",
+      "cropFactor": 5.6,
+      "modelAliases": [
+        "PowerShot SX710 HS"
+      ]
+    },
+    {
+      "maker": "Canon",
+      "model": "EOS D2000",
+      "cropFactor": 1.593
+    },
+    {
+      "maker": "Canon",
+      "model": "IXY Digital 600",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Canon",
+      "model": "IXY Digital 700",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Casio",
+      "model": "QV-3000EX",
+      "cropFactor": 4.8,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio",
+      "model": "QV-3500EX",
+      "cropFactor": 4.8,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio",
+      "model": "QV-4000",
+      "cropFactor": 4.843,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-P600",
+      "cropFactor": 4.65,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-P700",
+      "cropFactor": 4.65,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-Z3",
+      "cropFactor": 6.05,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-Z30",
+      "cropFactor": 6.05,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-Z4",
+      "cropFactor": 6.05,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-Z40",
+      "cropFactor": 6.05,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-Z55",
+      "cropFactor": 6.05,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd",
+      "model": "EX-Z750",
+      "cropFactor": 4.8,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Casio Computer Co.,Ltd.",
+      "model": "EX-FH20",
+      "cropFactor": 5.68,
+      "makerAliases": [
+        "Casio"
+      ]
+    },
+    {
+      "maker": "Contax",
+      "model": "35mm film: full frame",
+      "cropFactor": 1
+    },
+    {
+      "maker": "DJI",
+      "model": "FC3411",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "Air 2S"
+      ]
+    },
+    {
+      "maker": "DJI",
+      "model": "FC3582",
+      "cropFactor": 3.6,
+      "modelAliases": [
+        "Mini 3 Pro"
+      ]
+    },
+    {
+      "maker": "DJI",
+      "model": "FC6310",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "DJI",
+      "model": "FC6310R",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "Phantom 4 RTK"
+      ]
+    },
+    {
+      "maker": "DJI",
+      "model": "Mavic Air FC2103",
+      "cropFactor": 5.6
+    },
+    {
+      "maker": "DJI",
+      "model": "Mavic Pro FC220",
+      "cropFactor": 5.64
+    },
+    {
+      "maker": "DJI",
+      "model": "Phantom 3 Pro FC300X",
+      "cropFactor": 5.5
+    },
+    {
+      "maker": "DJI",
+      "model": "Phantom Vision FC200",
+      "cropFactor": 6
+    },
+    {
+      "maker": "Eastman Kodak Company",
+      "model": "Kodak CX6330 Zoom Digital Camera",
+      "cropFactor": 6.593,
+      "makerAliases": [
+        "Kodak"
+      ],
+      "modelAliases": [
+        "Kodak CX6330"
+      ]
+    },
+    {
+      "maker": "Eastman Kodak Company",
+      "model": "Kodak CX7525 Zoom Digital Camera",
+      "cropFactor": 6.07,
+      "makerAliases": [
+        "Kodak"
+      ],
+      "modelAliases": [
+        "Kodak CX7525"
+      ]
+    },
+    {
+      "maker": "Eastman Kodak Company",
+      "model": "Kodak DC120 ZOOM Digital Camera",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Kodak"
+      ],
+      "modelAliases": [
+        "Kodak DC120"
+      ]
+    },
+    {
+      "maker": "Eastman Kodak Company",
+      "model": "Kodak Digital Science DC50 Zoom Camera",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Kodak"
+      ],
+      "modelAliases": [
+        "Kodak DC50"
+      ]
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix 3800",
+      "cropFactor": 6.3333333
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix A370",
+      "cropFactor": 6.03
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix E550",
+      "cropFactor": 4.5
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F10",
+      "cropFactor": 4.5
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F11",
+      "cropFactor": 4.5
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F200EXR",
+      "cropFactor": 4.341
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F601 ZOOM",
+      "cropFactor": 4.487
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F710",
+      "cropFactor": 4.5
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F770EXR",
+      "cropFactor": 5.43
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F810",
+      "cropFactor": 4.5
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix F810",
+      "cropFactor": 4.9
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix HS20EXR",
+      "cropFactor": 5.71
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix HS30EXR",
+      "cropFactor": 5.71
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S20Pro",
+      "cropFactor": 4.487
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S3000",
+      "cropFactor": 6.3333333
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S304",
+      "cropFactor": 6.3333333
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S3Pro",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "FinePix S3 Pro"
+      ]
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S5100",
+      "cropFactor": 6.491
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S5500",
+      "cropFactor": 6.491
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S5600",
+      "cropFactor": 6.03
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S5Pro",
+      "cropFactor": 1.56,
+      "modelAliases": [
+        "FinePix S5 Pro"
+      ]
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S602 ZOOM",
+      "cropFactor": 4.487
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S7000",
+      "cropFactor": 4.487
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S9000",
+      "cropFactor": 4.48
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S9500",
+      "cropFactor": 4.48
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix S9600",
+      "cropFactor": 4.48
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix X100",
+      "cropFactor": 1.523
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePix2800ZOOM",
+      "cropFactor": 6.3333333
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePixS1Pro",
+      "cropFactor": 1.543,
+      "modelAliases": [
+        "FinePix S1 Pro"
+      ]
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "FinePixS2Pro",
+      "cropFactor": 1.543,
+      "modelAliases": [
+        "FinePix S2 Pro"
+      ]
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX 100",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX 50R",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX 50S",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX100 II",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX100RF",
+      "cropFactor": 0.8
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX100S",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX100S II",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "GFX50S II",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "IS Pro",
+      "cropFactor": 1.56,
+      "modelAliases": [
+        "FinePix IS Pro"
+      ]
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-A1",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-A10",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-A2",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-A3",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-A5",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-A7",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-E1",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-E2",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-E2S",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-E3",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-E4",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-E5",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-H1",
+      "cropFactor": 1.528
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-H2",
+      "cropFactor": 1.528
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-H2S",
+      "cropFactor": 1.528
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-M1",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-M5",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-Pro1",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-Pro2",
+      "cropFactor": 1.528
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-Pro3",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-S1",
+      "cropFactor": 3.93
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-S10",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-S20",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T1",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T10",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T100",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T2",
+      "cropFactor": 1.528
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T20",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T200",
+      "cropFactor": 1.529
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T3",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T30",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T30 II",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T30 III",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T4",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T5",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X-T50",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X10",
+      "cropFactor": 3.93
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X100F",
+      "cropFactor": 1.528
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X100S",
+      "cropFactor": 1.523
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X100T",
+      "cropFactor": 1.523
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X100V",
+      "cropFactor": 1.53
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X100VI",
+      "cropFactor": 1.53
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X20",
+      "cropFactor": 3.93
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X30",
+      "cropFactor": 3.93
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "X70",
+      "cropFactor": 1.5375
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "XF10",
+      "cropFactor": 1.53
+    },
+    {
+      "maker": "Fujifilm",
+      "model": "XQ1",
+      "cropFactor": 3.91
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 0.8 (Medium Format)",
+      "cropFactor": 0.79,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 0.8 (Mittelformat)"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 1.0 (Full Frame)",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 1.0 (Kleinbildformat)"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 1.1",
+      "cropFactor": 1.1,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 1.1"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 1.3 (APS-H)",
+      "cropFactor": 1.267,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 1.3 (APS-H)"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 1.5 (APS-C)",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 1.5 (APS-C)"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 1.6 (APS-C)",
+      "cropFactor": 1.611,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 1.6 (Canon APS-C)"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 1.7",
+      "cropFactor": 1.739,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 1.7 (Sigma)"
+      ]
+    },
+    {
+      "maker": "Generic",
+      "model": "Crop-factor 2.0 (Four-Thirds)",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Generisch"
+      ],
+      "modelAliases": [
+        "Crop-Faktor 2.0 (Four-Thirds)"
+      ]
+    },
+    {
+      "maker": "GitUp",
+      "model": "Git2",
+      "cropFactor": 5.57
+    },
+    {
+      "maker": "GoPro",
+      "model": "HD2",
+      "cropFactor": 6.4
+    },
+    {
+      "maker": "GoPro",
+      "model": "Hero10 black",
+      "cropFactor": 5.5
+    },
+    {
+      "maker": "GoPro",
+      "model": "Hero11 Black",
+      "cropFactor": 5.54
+    },
+    {
+      "maker": "GoPro",
+      "model": "Hero3+ black",
+      "cropFactor": 5.42
+    },
+    {
+      "maker": "GoPro",
+      "model": "HERO4 Black",
+      "cropFactor": 5
+    },
+    {
+      "maker": "GoPro",
+      "model": "HERO4 Silver",
+      "cropFactor": 7.66
+    },
+    {
+      "maker": "GoPro",
+      "model": "HERO5 Black",
+      "cropFactor": 5
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "CFV 100C/907X",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "CFV II 50C/907X",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "Hasselblad 500 mech.",
+      "cropFactor": 0.66
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "Hasselblad H3D",
+      "cropFactor": 0.72
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "L1D-20c",
+      "cropFactor": 2.8,
+      "modelAliases": [
+        "DJI Mavic 2 Pro"
+      ]
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "L2D-20c",
+      "cropFactor": 1.953,
+      "modelAliases": [
+        "DJI Mavic 3"
+      ]
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "X1D II 50C",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "X2D 100C",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Hasselblad",
+      "model": "X2D II 100C",
+      "cropFactor": 0.79
+    },
+    {
+      "maker": "Honor",
+      "model": "DLI-L22",
+      "cropFactor": 8.235,
+      "modelAliases": [
+        "6A"
+      ]
+    },
+    {
+      "maker": "Huawei",
+      "model": "CLT-L29",
+      "cropFactor": 4.55,
+      "modelAliases": [
+        "P20 Pro"
+      ]
+    },
+    {
+      "maker": "Huawei",
+      "model": "VOG-L29",
+      "cropFactor": 4.86,
+      "modelAliases": [
+        "P30 Pro"
+      ]
+    },
+    {
+      "maker": "Huawei",
+      "model": "WAS-LX1A",
+      "cropFactor": 6.88,
+      "modelAliases": [
+        "P10 Lite"
+      ]
+    },
+    {
+      "maker": "KMZ",
+      "model": "Zenit 122",
+      "cropFactor": 1,
+      "makerAliases": [
+        "КМЗ"
+      ],
+      "modelAliases": [
+        "Зенит 122"
+      ]
+    },
+    {
+      "maker": "KMZ",
+      "model": "Zenit 122K",
+      "cropFactor": 1,
+      "makerAliases": [
+        "КМЗ"
+      ],
+      "modelAliases": [
+        "Зенит 122K"
+      ]
+    },
+    {
+      "maker": "KMZ",
+      "model": "Zenit 212K",
+      "cropFactor": 1,
+      "makerAliases": [
+        "КМЗ"
+      ],
+      "modelAliases": [
+        "Зенит 212K"
+      ]
+    },
+    {
+      "maker": "KMZ",
+      "model": "Zenit 312K",
+      "cropFactor": 1,
+      "makerAliases": [
+        "КМЗ"
+      ],
+      "modelAliases": [
+        "Зенит 312K"
+      ]
+    },
+    {
+      "maker": "KMZ",
+      "model": "Zenit 412LS",
+      "cropFactor": 1,
+      "makerAliases": [
+        "КМЗ"
+      ],
+      "modelAliases": [
+        "Зенит 412LS"
+      ]
+    },
+    {
+      "maker": "KMZ",
+      "model": "Zenit KM",
+      "cropFactor": 1,
+      "makerAliases": [
+        "КМЗ"
+      ],
+      "modelAliases": [
+        "Зенит KM"
+      ]
+    },
+    {
+      "maker": "Kodak",
+      "model": "DCS Pro 14N",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Kodak",
+      "model": "DCS Pro 14nx",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Kodak",
+      "model": "DCS Pro SLR/c",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Kodak",
+      "model": "DCS Pro SLR/n",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Kodak",
+      "model": "DCS520",
+      "cropFactor": 1.593,
+      "modelAliases": [
+        "DCS 520"
+      ]
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "DiMAGE A200",
+      "cropFactor": 3.933
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "DiMAGE Z10",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "DiMAGE Z20",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "DiMAGE Z3",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "DiMAGE Z5",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "DiMAGE Z6",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "Dynax 5D",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "Dynax 7D",
+      "cropFactor": 1.522
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "Maxxum 5D",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Konica Minolta",
+      "model": "Maxxum 7D",
+      "cropFactor": 1.522
+    },
+    {
+      "maker": "Konica Minolta Camera, Inc.",
+      "model": "DiMAGE A2",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Konica Minolta"
+      ]
+    },
+    {
+      "maker": "Konica Minolta Camera, Inc.",
+      "model": "DiMAGE G400",
+      "cropFactor": 6.144,
+      "makerAliases": [
+        "Konica Minolta"
+      ]
+    },
+    {
+      "maker": "Konica Minolta Camera, Inc.",
+      "model": "DiMAGE Z2",
+      "cropFactor": 6.03,
+      "makerAliases": [
+        "Konica Minolta"
+      ]
+    },
+    {
+      "maker": "Konica Minolta Camera, Inc.",
+      "model": "Revio KD-420Z",
+      "cropFactor": 6.144,
+      "makerAliases": [
+        "Konica Minolta"
+      ]
+    },
+    {
+      "maker": "Leica",
+      "model": "D-Lux 3",
+      "cropFactor": 4.33
+    },
+    {
+      "maker": "Leica",
+      "model": "D-Lux 4",
+      "cropFactor": 4.33
+    },
+    {
+      "maker": "Leica",
+      "model": "D-Lux2",
+      "cropFactor": 4.45,
+      "modelAliases": [
+        "D-Lux 2"
+      ]
+    },
+    {
+      "maker": "Leica",
+      "model": "Digilux 2",
+      "cropFactor": 3.933
+    },
+    {
+      "maker": "Leica",
+      "model": "Digilux 3",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "C-Lux",
+      "cropFactor": 2.73,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "C-Lux (Typ 1546)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica CL",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "CL (Typ 7323)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M (Typ 240)",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M (Typ 240)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M EV1",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M EV1"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M Monochrom (Typ 246)",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M Monochrom (Typ 246)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M10",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M10"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M10 Monochrom",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M10 Monochrom"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M10-D",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M10-D"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M10-P",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M10-P"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M10-R",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M10-R"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M11",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M11"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M11 Monochrom",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M11 Monochrom"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M11-D",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M11-D"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica M11-P",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "M11-P"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica Q (Typ 116)",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "Q (Typ 116)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica Q2",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "Q2"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica Q2 Mono",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "Q2 Monochrom"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica Q3",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "Q3"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica Q3 Mono",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "Q3 Monochrom"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica SL (Typ 601)",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "SL (Typ 601)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica SL2",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "SL2"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica SL2-S",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "SL2-S"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica SL3",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "SL3"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica SL3-S",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "SL3-S"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica T (Typ 701)",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "T (Typ 701)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica TL",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "TL"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica TL2",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "TL2"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "Leica X Vario (Typ 107)",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "X Vario (Typ 107)"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "M8 Digital Camera",
+      "cropFactor": 1.33,
+      "makerAliases": [
+        "Leica"
+      ]
+    },
+    {
+      "maker": "Leica Camera AG",
+      "model": "M9 Digital Camera",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ]
+    },
+    {
+      "maker": "LEICA CAMERA AG",
+      "model": "LEICA Q3 43",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Leica"
+      ],
+      "modelAliases": [
+        "Q3 43"
+      ]
+    },
+    {
+      "maker": "LG Mobile",
+      "model": "LG-H815",
+      "cropFactor": 6.34,
+      "makerAliases": [
+        "LG"
+      ],
+      "modelAliases": [
+        "LG G4"
+      ]
+    },
+    {
+      "maker": "Mamiya",
+      "model": "Mamiya 645",
+      "cropFactor": 0.577
+    },
+    {
+      "maker": "Mamiya",
+      "model": "Mamiya ZD",
+      "cropFactor": 0.721
+    },
+    {
+      "maker": "Microsoft",
+      "model": "Lumia 950",
+      "cropFactor": 6.02
+    },
+    {
+      "maker": "Microsoft",
+      "model": "Lumia 950 XL",
+      "cropFactor": 6.02
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE 7",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE 7Hi",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE 7i",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE A1",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE X",
+      "cropFactor": 6.5,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE Xi",
+      "cropFactor": 6.5,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE Xt",
+      "cropFactor": 6.5,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Minolta Co., Ltd.",
+      "model": "DiMAGE Z1",
+      "cropFactor": 6.545,
+      "makerAliases": [
+        "Minolta"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "35mm film: full frame",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix P330",
+      "cropFactor": 4.706
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix P340",
+      "cropFactor": 4.706
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix P60",
+      "cropFactor": 5.62
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix P6000",
+      "cropFactor": 4.6
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix P7000",
+      "cropFactor": 4.69
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix P7800",
+      "cropFactor": 4.67
+    },
+    {
+      "maker": "Nikon",
+      "model": "Coolpix S3300",
+      "cropFactor": 5.65
+    },
+    {
+      "maker": "Nikon",
+      "model": "E4200",
+      "cropFactor": 4.86,
+      "modelAliases": [
+        "Coolpix 4200"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E4500",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "Coolpix 4500"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E4800",
+      "cropFactor": 6,
+      "modelAliases": [
+        "Coolpix 4800"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E5000",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Coolpix 5000"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E5200",
+      "cropFactor": 4.86,
+      "modelAliases": [
+        "Coolpix 5200"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E5400",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "Coolpix 5400"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E5700",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Coolpix 5700"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E5900",
+      "cropFactor": 4.86,
+      "modelAliases": [
+        "Coolpix 5900"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E7600",
+      "cropFactor": 4.86,
+      "modelAliases": [
+        "Coolpix 7600"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E7900",
+      "cropFactor": 4.86,
+      "modelAliases": [
+        "Coolpix 7900"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E8400",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Coolpix 8400"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E8700",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Coolpix 8700"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E8800",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Coolpix 8800"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E950",
+      "cropFactor": 5.408,
+      "modelAliases": [
+        "Coolpix 950"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E990",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "Coolpix 990"
+      ]
+    },
+    {
+      "maker": "Nikon",
+      "model": "E995",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "Coolpix 995"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Coolpix A",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Coolpix P1000",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Nikon"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Coolpix P1100",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Nikon"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 AW1",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 AW1"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 J1",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 J1"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 J2",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 J2"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 J3",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 J3"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 J4",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 J4"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 J5",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 J5"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 S1",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 S1"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 S2",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 S2"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 V1",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 V1"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 V2",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 V2"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon 1 V3",
+      "cropFactor": 2.727,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "1 V3"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D1",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D1"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D100",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D100"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D1H",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D1H"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D1X",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D1X"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D200",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D200"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D2H",
+      "cropFactor": 1.546,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D2H"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D2Hs",
+      "cropFactor": 1.546,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D2Hs"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D2X",
+      "cropFactor": 1.522,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D2X"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D2Xs",
+      "cropFactor": 1.522,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D2Xs"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D300",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D300"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3000",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3000"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D300S",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D300S"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3100",
+      "cropFactor": 1.558,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3100"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3200",
+      "cropFactor": 1.554,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3200"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3300",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3300"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3400",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3400"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3500",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3500"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3S",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3S"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D3X",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D3X"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D4",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D4"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D40",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D40"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D40X",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D40X"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D4s",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D4s"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5",
+      "cropFactor": 1.003,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D50",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D50"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D500",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D500"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5000",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5000"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5100",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5100"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5200",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5200"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5300",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5300"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5500",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5500"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D5600",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D5600"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D6",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D6"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D60",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D60"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D600",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D600"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D610",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D610"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D70",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D70"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D700",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D700"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D7000",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D7000"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D70s",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D70s"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D7100",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D7100"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D7200",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D7200"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D750",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D750"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D7500",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D7500"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D780",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D780"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D80",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D80"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D800",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D800"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D800E",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D800E"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D810",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D810"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D850",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D850"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon D90",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "D90"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Df",
+      "cropFactor": 1.001,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Df"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 30",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 30"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 5",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 5"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 50",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 50"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 6",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 6"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 6_2",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 6II"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 7",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 7"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 7_2",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 7II"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 8",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 8"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z 9",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z 9"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z f",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z f"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z fc",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z fc"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z5_2",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z5II"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z50_2",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z50II"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon Z6_3",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "Z6III"
+      ]
+    },
+    {
+      "maker": "Nikon Corporation",
+      "model": "Nikon ZR",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Nikon"
+      ],
+      "modelAliases": [
+        "ZR"
+      ]
+    },
+    {
+      "maker": "Nokia",
+      "model": "Lumia 1020",
+      "cropFactor": 3.93
+    },
+    {
+      "maker": "Nokia",
+      "model": "Lumia 1520",
+      "cropFactor": 6.26
+    },
+    {
+      "maker": "Olympus",
+      "model": "mju-II",
+      "cropFactor": 1,
+      "modelAliases": [
+        "µ-II"
+      ]
+    },
+    {
+      "maker": "Olympus",
+      "model": "Stylus Epic",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "C5060WZ",
+      "cropFactor": 4.93,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-5060 Wide Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "C8080WZ",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-8080 Wide Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-1",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-M10 Mark III",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M10 III"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-M10MarkII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M10 II"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-M10MarkIIIS",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M10 III S"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-M10MarkIV",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M10 IV"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-M1MarkIII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M1 III"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-M5MarkIII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M5 III"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-PL8",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "E-PL9",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "TG-1",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Tough TG-1"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "TG-2",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Tough TG-2"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "TG-3",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Tough TG-3"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "TG-4",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Tough TG-4"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "TG-5",
+      "cropFactor": 5.62,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Tough TG-5"
+      ]
+    },
+    {
+      "maker": "Olympus Corporation",
+      "model": "TG-6",
+      "cropFactor": 5.56,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Tough TG-6"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "C7070WZ",
+      "cropFactor": 4.93,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-7070 Wide Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "C70Z,C7000Z",
+      "cropFactor": 4.8,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-70 Zoom, C-7000 Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-3",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-30",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-300",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-330",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-400",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-410",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-420",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-450",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-5",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-500",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-510",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-520",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-600",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-620",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-M1",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-M10",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-M1MarkII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M1 II"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-M5",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-M5MarkII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-M5 II"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-P1",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-P2",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-P3",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-P5",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-P7",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL1",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL1s",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL2",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL3",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL5",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL6",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PL7",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PM1",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "E-PM2",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "PEN-F",
+      "cropFactor": 2,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "SP350",
+      "cropFactor": 4.8,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "SP-350"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "SP500UZ",
+      "cropFactor": 6,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "SP-500 Ultra Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "SP560UZ",
+      "cropFactor": 5.8,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "SP-560 Ultra Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "Stylus1",
+      "cropFactor": 4.67,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Stylus 1"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "Stylus1,1s",
+      "cropFactor": 4.67,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Stylus 1, 1s"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "u-miniD,Stylus V",
+      "cropFactor": 6,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "µ-mini Digital"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "u-miniD,Stylus V",
+      "cropFactor": 6,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "Stylus Verve Digital"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "XZ-1",
+      "cropFactor": 4.68,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Imaging Corp.",
+      "model": "XZ-2",
+      "cropFactor": 4.68,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C2040Z",
+      "cropFactor": 4.93,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-2040 Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C3040Z",
+      "cropFactor": 4.93,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-3040 Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C4040Z",
+      "cropFactor": 4.93,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-4040 Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C4100Z,C4000Z",
+      "cropFactor": 4.92,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-4000 Zoom, C-4100 Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C5050Z",
+      "cropFactor": 4.93,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-5050 Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C700UZ",
+      "cropFactor": 6.52,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-700 Ultra Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C730UZ",
+      "cropFactor": 6.52,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-730 Ultra Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C750UZ",
+      "cropFactor": 6.03,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-750 Ultra Zoom"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C860L,D360L",
+      "cropFactor": 6.563,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-860L"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "C860L,D360L",
+      "cropFactor": 6.563,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "D-360L"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "E-10",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Olympus"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "E-20,E-20N,E-20P",
+      "cropFactor": 3.933,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "E-20, E-20N, E-20P"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "X-2,C-50Z",
+      "cropFactor": 4.9,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "X-2"
+      ]
+    },
+    {
+      "maker": "Olympus Optical Co.,Ltd",
+      "model": "X-2,C-50Z",
+      "cropFactor": 4.9,
+      "makerAliases": [
+        "Olympus"
+      ],
+      "modelAliases": [
+        "C-50 Zoom"
+      ]
+    },
+    {
+      "maker": "OM Digital Solutions",
+      "model": "OM-1",
+      "cropFactor": 2,
+      "makerAliases": [
+        "OM System"
+      ]
+    },
+    {
+      "maker": "OM Digital Solutions",
+      "model": "OM-1MarkII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "OM System"
+      ],
+      "modelAliases": [
+        "OM-1 II"
+      ]
+    },
+    {
+      "maker": "OM Digital Solutions",
+      "model": "OM-3",
+      "cropFactor": 2,
+      "makerAliases": [
+        "OM System"
+      ]
+    },
+    {
+      "maker": "OM Digital Solutions",
+      "model": "OM-5",
+      "cropFactor": 2,
+      "makerAliases": [
+        "OM System"
+      ]
+    },
+    {
+      "maker": "OM Digital Solutions",
+      "model": "OM-5MarkII",
+      "cropFactor": 2,
+      "makerAliases": [
+        "OM System"
+      ],
+      "modelAliases": [
+        "OM-5 II"
+      ]
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-FZ10002",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G100",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G100D",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G110",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G9",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G90",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G91",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G95",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G95D",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G97",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G99",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G99D",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-G9M2",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GH5",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GH5M2",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GH5S",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GH6",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GH7",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GX7MK3",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GX800",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GX880",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-GX9",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-LX100M2",
+      "cropFactor": 2.21
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S1",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S1H",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S1M2",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S1M2ES",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S1R",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S1RM2",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S5",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S5D",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S5M2",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S5M2X",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-S9",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ200",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ200D",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ202",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ220",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ90",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ91",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ96",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-TZ99",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-ZS200",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-ZS200D",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-ZS220",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DC-ZS70",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FX150",
+      "cropFactor": 4.7
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FX2",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FX7",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FX8",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FX9",
+      "cropFactor": 6.05
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ10",
+      "cropFactor": 5.84
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ100",
+      "cropFactor": 5.6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ100 (3:2)",
+      "cropFactor": 5.81
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ1000",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ150",
+      "cropFactor": 5.56
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ18",
+      "cropFactor": 6.1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ20",
+      "cropFactor": 6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ200",
+      "cropFactor": 5.56
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ2000",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ2500",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ28",
+      "cropFactor": 5.6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ3",
+      "cropFactor": 7.6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ30",
+      "cropFactor": 4.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ300",
+      "cropFactor": 5.56
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ330",
+      "cropFactor": 5.56
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ35",
+      "cropFactor": 5.6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ40",
+      "cropFactor": 5.6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ40 (3:2)",
+      "cropFactor": 5.81
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ45",
+      "cropFactor": 5.6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ45 (3:2)",
+      "cropFactor": 5.81
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ5",
+      "cropFactor": 6
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ50",
+      "cropFactor": 4.84
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-FZ8",
+      "cropFactor": 6.02
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G1",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G10",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G2",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G3",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G5",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G6",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G7",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G70",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G8",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G80",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G81",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-G85",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF1",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF2",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF3",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF5",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF6",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF7",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GF8",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GH1",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GH2",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GH3",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GH4",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GM1",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GM5",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GX1",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GX7",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GX8",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GX80",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-GX85",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-L1",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-L10",
+      "cropFactor": 2
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LC1",
+      "cropFactor": 3.933
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LF1",
+      "cropFactor": 4.67
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX1",
+      "cropFactor": 4.45
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX1",
+      "cropFactor": 5.08
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX1",
+      "cropFactor": 5.4
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX10",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX100",
+      "cropFactor": 2.21
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX15",
+      "cropFactor": 2.73
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX2",
+      "cropFactor": 4.44
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX3",
+      "cropFactor": 4.7
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX3",
+      "cropFactor": 5.7528
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX3",
+      "cropFactor": 5.1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX3",
+      "cropFactor": 5.32
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX5",
+      "cropFactor": 4.71
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LX7",
+      "cropFactor": 5.1
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LZ1",
+      "cropFactor": 6.06
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-LZ2",
+      "cropFactor": 6.06
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ100",
+      "cropFactor": 2.75
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ101",
+      "cropFactor": 2.75
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ110",
+      "cropFactor": 2.75
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ60",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ61",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ70",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ71",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ80",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-TZ81",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-ZS100",
+      "cropFactor": 2.75
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-ZS110",
+      "cropFactor": 2.75
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-ZS40",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-ZS50",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Panasonic",
+      "model": "DMC-ZS60",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Pentax",
+      "model": "35mm film: full frame",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax 645D",
+      "cropFactor": 0.79,
+      "modelAliases": [
+        "645D"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-01",
+      "cropFactor": 1.522,
+      "modelAliases": [
+        "K-01"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-30",
+      "cropFactor": 1.526,
+      "modelAliases": [
+        "K-30"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-5",
+      "cropFactor": 1.526,
+      "modelAliases": [
+        "K-5"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-5 II",
+      "cropFactor": 1.526,
+      "modelAliases": [
+        "K-5 II"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-5 II s",
+      "cropFactor": 1.526,
+      "modelAliases": [
+        "K-5 IIs"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-50",
+      "cropFactor": 1.526,
+      "modelAliases": [
+        "K-50"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-500",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "K-500"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-7",
+      "cropFactor": 1.538,
+      "modelAliases": [
+        "K-7"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-m",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "K-m"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-r",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "K-r"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K-x",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "K-x"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K2000",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "K2000"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax K200D",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "K200D"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax Q",
+      "cropFactor": 5.53,
+      "modelAliases": [
+        "Q"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax Q-S1",
+      "cropFactor": 4.6,
+      "modelAliases": [
+        "Q-S1"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax Q10",
+      "cropFactor": 5.53,
+      "modelAliases": [
+        "Q10"
+      ]
+    },
+    {
+      "maker": "Pentax",
+      "model": "Pentax Q7",
+      "cropFactor": 4.6,
+      "modelAliases": [
+        "Q7"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax *ist D",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "*ist D"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax *ist DL",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "*ist DL"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax *ist DL2",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "*ist DL2"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax *ist DS",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "*ist DS"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax *ist DS2",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "*ist DS2"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax K100D",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K100D"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax K100D Super",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K100D Super"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax K10D",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K10D"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax K110D",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K110D"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax K20D",
+      "cropFactor": 1.538,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K20D"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 230GS",
+      "cropFactor": 6.563,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 230GS"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 330GS",
+      "cropFactor": 6.563,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 330GS"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 33L",
+      "cropFactor": 6.563,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 33L"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 33LF",
+      "cropFactor": 6.563,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 33LF"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 43WR",
+      "cropFactor": 6.5,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 43WR"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 450",
+      "cropFactor": 4.843,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 450"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 550",
+      "cropFactor": 4.843,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 550"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 555",
+      "cropFactor": 4.843,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 555"
+      ]
+    },
+    {
+      "maker": "Pentax Corporation",
+      "model": "Pentax Optio 750Z",
+      "cropFactor": 4.843,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "Optio 750Z"
+      ]
+    },
+    {
+      "maker": "Phase One",
+      "model": "IQ140",
+      "cropFactor": 0.789
+    },
+    {
+      "maker": "Phase One",
+      "model": "IQ180",
+      "cropFactor": 0.644
+    },
+    {
+      "maker": "Phase One",
+      "model": "P 25",
+      "cropFactor": 0.577
+    },
+    {
+      "maker": "Ricoh",
+      "model": "Caplio GX",
+      "cropFactor": 4.9
+    },
+    {
+      "maker": "Ricoh",
+      "model": "Caplio GX8",
+      "cropFactor": 4.9
+    },
+    {
+      "maker": "Ricoh",
+      "model": "Caplio RR30",
+      "cropFactor": 6.4
+    },
+    {
+      "maker": "Ricoh",
+      "model": "GR Digital",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "GR",
+      "cropFactor": 1.523,
+      "makerAliases": [
+        "Ricoh"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax 645Z",
+      "cropFactor": 0.79,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "645Z"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-1",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-1"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-1 Mark II",
+      "cropFactor": 1,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-1 II"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-3",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-3"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-3 II",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-3 II"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-3 Mark III",
+      "cropFactor": 1.546,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-3 III"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-3 Mark III Monochrome",
+      "cropFactor": 1.546,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-3 III Monochrome"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-70",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-70"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-S1",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-S1"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax K-S2",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "K-S2"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax KF",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "KF"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Pentax KP",
+      "cropFactor": 1.534,
+      "makerAliases": [
+        "Pentax"
+      ],
+      "modelAliases": [
+        "KP"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Ricoh GR III",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Ricoh"
+      ],
+      "modelAliases": [
+        "GR III"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Ricoh GR III HDF",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Ricoh"
+      ],
+      "modelAliases": [
+        "GR III HDF"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Ricoh GR IIIx",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Ricoh"
+      ],
+      "modelAliases": [
+        "GR IIIx"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Ricoh GR IIIx HDF",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Ricoh"
+      ],
+      "modelAliases": [
+        "GR IIIx HDF"
+      ]
+    },
+    {
+      "maker": "Ricoh Imaging Company, Ltd.",
+      "model": "Ricoh GR IV",
+      "cropFactor": 1.53,
+      "makerAliases": [
+        "Ricoh"
+      ],
+      "modelAliases": [
+        "GR IV"
+      ]
+    },
+    {
+      "maker": "Rolleiflex",
+      "model": "2.8E",
+      "cropFactor": 0.51
+    },
+    {
+      "maker": "Samsung",
+      "model": "EK-GN120",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "Galaxy NX"
+      ]
+    },
+    {
+      "maker": "Samsung",
+      "model": "EX2F",
+      "cropFactor": 4.6
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX mini",
+      "cropFactor": 2.727
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX1",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX10",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX100",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX1000",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX11",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX1100",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX20",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX200",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX2000",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX210",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX30",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX300",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX3000",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX300M",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX5",
+      "cropFactor": 1.525
+    },
+    {
+      "maker": "Samsung",
+      "model": "NX500",
+      "cropFactor": 1.531
+    },
+    {
+      "maker": "Samsung",
+      "model": "SM-G935F",
+      "cropFactor": 6.19,
+      "modelAliases": [
+        "Galaxy S7"
+      ]
+    },
+    {
+      "maker": "Samsung",
+      "model": "SM-G9500",
+      "cropFactor": 6.19,
+      "modelAliases": [
+        "Galaxy S8"
+      ]
+    },
+    {
+      "maker": "Samsung",
+      "model": "SM-G950F",
+      "cropFactor": 6.19,
+      "modelAliases": [
+        "Galaxy S8"
+      ]
+    },
+    {
+      "maker": "Samsung",
+      "model": "SM-G991B",
+      "cropFactor": 6,
+      "modelAliases": [
+        "Galaxy S21"
+      ]
+    },
+    {
+      "maker": "Samsung",
+      "model": "SM-N950U",
+      "cropFactor": 6.047,
+      "modelAliases": [
+        "Galaxy Note 8"
+      ]
+    },
+    {
+      "maker": "Samsung",
+      "model": "WB2000",
+      "cropFactor": 5.69
+    },
+    {
+      "maker": "Samsung Techwin",
+      "model": "GX-1L",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Samsung"
+      ],
+      "modelAliases": [
+        "GX-1L"
+      ]
+    },
+    {
+      "maker": "Samsung Techwin",
+      "model": "GX-1S",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Samsung"
+      ],
+      "modelAliases": [
+        "GX-1S"
+      ]
+    },
+    {
+      "maker": "Samsung Techwin Co.",
+      "model": "GX20",
+      "cropFactor": 1.538,
+      "makerAliases": [
+        "Samsung"
+      ],
+      "modelAliases": [
+        "GX20"
+      ]
+    },
+    {
+      "maker": "Samsung Techwin Co.",
+      "model": "SAMSUNG GX10",
+      "cropFactor": 1.531,
+      "makerAliases": [
+        "Samsung"
+      ],
+      "modelAliases": [
+        "GX10"
+      ]
+    },
+    {
+      "maker": "SEIKO EPSON CORP.",
+      "model": "R-D1",
+      "cropFactor": 1.525,
+      "makerAliases": [
+        "Epson"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "sd Quattro",
+      "cropFactor": 1.523
+    },
+    {
+      "maker": "Sigma",
+      "model": "sd Quattro H",
+      "cropFactor": 1.346
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma BF",
+      "cropFactor": 1,
+      "modelAliases": [
+        "BF"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP1",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "DP1"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP1 Merrill",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "DP1 Merrill"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP1S",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "DP1S"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP1X",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "DP1X"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP2",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "DP2"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP2 Merrill",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "DP2 Merrill"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP2S",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "DP2S"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP2X",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "DP2X"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma DP3 Merrill",
+      "cropFactor": 1.531,
+      "modelAliases": [
+        "DP3 Merrill"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma fp",
+      "cropFactor": 1,
+      "modelAliases": [
+        "fp"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma fp L",
+      "cropFactor": 1,
+      "modelAliases": [
+        "fp L"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma SD1",
+      "cropFactor": 1.5,
+      "modelAliases": [
+        "SD1"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma SD1 Merrill",
+      "cropFactor": 1.5,
+      "modelAliases": [
+        "SD1 Merrill"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma SD10",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "SD10"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma SD14",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "SD14"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma SD15",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "SD15"
+      ]
+    },
+    {
+      "maker": "Sigma",
+      "model": "Sigma SD9",
+      "cropFactor": 1.739,
+      "modelAliases": [
+        "SD9"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "Cybershot",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Cyber-shot"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "Cybershot",
+      "cropFactor": 3.933,
+      "modelAliases": [
+        "Cyber-shot"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "Cybershot",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "Cyber-shot"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "Cybershot",
+      "cropFactor": 4.843,
+      "modelAliases": [
+        "Cyber-shot"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-F828",
+      "cropFactor": 3.933
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-H1",
+      "cropFactor": 6
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-HX20V",
+      "cropFactor": 5.62
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-HX300",
+      "cropFactor": 5.58
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-P100",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-P150",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-P200",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-P73",
+      "cropFactor": 6.5
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-P93",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-R1",
+      "cropFactor": 1.68
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX0",
+      "cropFactor": 2.7,
+      "modelAliases": [
+        "RX0"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX0M2",
+      "cropFactor": 2.7,
+      "modelAliases": [
+        "RX0 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX10",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX10"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX100"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M2",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX100 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M3",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX100 III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M4",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX100 IV"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M5",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX100 V"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M5A",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX100 VA"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M6",
+      "cropFactor": 2.66,
+      "modelAliases": [
+        "RX100 VI"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M7",
+      "cropFactor": 2.66,
+      "modelAliases": [
+        "RX100 VII"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX100M7A",
+      "cropFactor": 2.66,
+      "modelAliases": [
+        "RX100 VIIA"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX10M2",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX10 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX10M3",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX10 III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX10M4",
+      "cropFactor": 2.73,
+      "modelAliases": [
+        "RX10 IV"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX1R",
+      "cropFactor": 1,
+      "modelAliases": [
+        "RX1R"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX1RM2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "RX1R II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-RX1RM3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "RX1R III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-S60",
+      "cropFactor": 6.5
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-S80",
+      "cropFactor": 6.5
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-S90",
+      "cropFactor": 6.5
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-ST80",
+      "cropFactor": 6.5
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-T1",
+      "cropFactor": 5.65
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-V1",
+      "cropFactor": 4.843
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-V3",
+      "cropFactor": 4.843
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-W1",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-W12",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-W15",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-W5",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSC-W7",
+      "cropFactor": 4.8
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A100",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 100"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A200",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 200"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A230",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 230"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A290",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 290"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A300",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 300"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A330",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 330"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A350",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 350"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A380",
+      "cropFactor": 1.528,
+      "modelAliases": [
+        "Alpha 380"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A390",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 390"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A450",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 450"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A500",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 500"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A550",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 550"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A560",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 560"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A580",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 580"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A700",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 700"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A850",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 850"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "DSLR-A900",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 900"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCA-68",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 68"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCA-77M2",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 77 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCA-99M2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 99 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-1",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 1"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-1M2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 1 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-3000",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 3000"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-5000",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 5000"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-5100",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 5100"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6000",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6000"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6100",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6100"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6100A",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6100A"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6300",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6300"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6400",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6400"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6400A",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6400A"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6500",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6500"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6600",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6600"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-6700",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 6700"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7C",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7C"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7CM2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7C II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7CR",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7CR"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7M2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7M3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7 III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7M4",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7 IV"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7M5",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7 V"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7R",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM3A",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R IIIA"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM4",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R IV"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM4A",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R IVA"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM5",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R V"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7RM6",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7R VI"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7S",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7S"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7SM2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7S II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-7SM3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 7S III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-9",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 9"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-9M2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 9 II"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILCE-9M3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "Alpha 9 III"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILME-FX2",
+      "cropFactor": 1,
+      "modelAliases": [
+        "FX2"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILME-FX3",
+      "cropFactor": 1,
+      "modelAliases": [
+        "FX3"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "ILME-FX30",
+      "cropFactor": 1.546,
+      "modelAliases": [
+        "FX30"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-3",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-3N",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-5",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-5N",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-5R",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-5T",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-6",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-7",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-C3",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "NEX-F3",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A33",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 33"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A35",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 35"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A37",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 37"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A55V",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 55"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A57",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 57"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A58",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 58"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A65V",
+      "cropFactor": 1.523,
+      "modelAliases": [
+        "Alpha 65"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A77V",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "Alpha 77"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A99",
+      "cropFactor": 1.005,
+      "modelAliases": [
+        "Alpha 99"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "SLT-A99V",
+      "cropFactor": 1.005,
+      "modelAliases": [
+        "Alpha 99V"
+      ]
+    },
+    {
+      "maker": "Sony",
+      "model": "Xperia Z3",
+      "cropFactor": 7.87
+    },
+    {
+      "maker": "Sony",
+      "model": "ZV-1",
+      "cropFactor": 2.7
+    },
+    {
+      "maker": "Sony",
+      "model": "ZV-E1",
+      "cropFactor": 1
+    },
+    {
+      "maker": "Sony",
+      "model": "ZV-E10",
+      "cropFactor": 1.534
+    },
+    {
+      "maker": "Sony",
+      "model": "ZV-E10M2",
+      "cropFactor": 1.534,
+      "modelAliases": [
+        "ZV-E10 II"
+      ]
+    },
+    {
+      "maker": "YI Technology",
+      "model": "M1",
+      "cropFactor": 2
+    }
+  ]
+}
