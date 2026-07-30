@@ -67,3 +67,13 @@ If a production package tarball has no top-level license or notice file, add an 
 ## Pull requests
 
 Keep each pull request focused. Describe the behavior change, security or privacy impact, verification commands, and any user-facing limitations. Do not mix generated artifacts or unrelated formatting changes into the patch.
+
+The `main` branch does not accept direct pushes, including from administrators. Work from a topic branch or fork and open a pull request. The `verify` GitHub Actions check must pass, the branch must be current with `main`, and all review conversations must be resolved before merge. Changes are squash-merged so each pull request remains one focused commit, and merged branches are deleted automatically.
+
+`CODEOWNERS` requests review from the repository owner. While IFEX has only one maintainer, an approving review is not mandatory because GitHub does not allow a pull request author to approve their own change. If another maintainer is granted write access, the branch rule should be raised to require at least one approval.
+
+## Release policy
+
+Only the repository owner creates version tags and publishes releases. Release tags use semantic versions such as `v0.1.0`; repository rules prevent other collaborators from creating, changing, or deleting tags. Published releases are immutable, so create them as drafts, attach and verify every asset and checksum, and publish only after the draft is complete.
+
+Desktop artifacts must be produced on their target operating system. Release notes must identify the target platform and architecture, checksum, signing and notarization status, and the verification performed. Do not publish a cross-built or unsigned artifact as if it were a production-signed installer.

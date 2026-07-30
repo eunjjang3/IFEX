@@ -1,0 +1,4 @@
+# Request the repository owner for every change. Branch protection requires
+# the PR and CI workflow; this file provides review routing for contributions.
+* @eunjjang3
+
