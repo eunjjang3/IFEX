@@ -28,6 +28,7 @@ function FindingIcon({ state }: { state: FindingState }) {
 function FindingRow({ finding }: { finding: ForensicFinding }) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+  const hasObservableEvidence = finding.state !== 'inconclusive' && finding.state !== 'unsupported' && finding.evidence.length > 0;
   return (
     <div className="border-b border-border/70 py-4 last:border-b-0">
       <div className="flex items-start gap-3">
@@ -38,11 +39,13 @@ function FindingRow({ finding }: { finding: ForensicFinding }) {
             <span className={`font-mono text-[10px] uppercase ${stateColors[finding.state]}`}>{t(`origin.state.${finding.state}`)}</span>
           </div>
           <p className="mt-1 font-sans text-xs leading-relaxed text-muted-foreground">{finding.summary}</p>
-          <button onClick={() => setExpanded((value) => !value)} className="mt-2 flex items-center gap-1 font-sans text-[11px] text-gold hover:text-foreground">
-            {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
-            {expanded ? t('origin.hideEvidence') : t('origin.showEvidence')}
-          </button>
-          {expanded && (
+          {hasObservableEvidence && (
+            <button onClick={() => setExpanded((value) => !value)} className="mt-2 flex items-center gap-1 font-sans text-[11px] text-gold hover:text-foreground">
+              {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
+              {expanded ? t('origin.hideEvidence') : t('origin.showEvidence')}
+            </button>
+          )}
+          {hasObservableEvidence && expanded && (
             <div className="mt-3 border-l border-border pl-3 font-sans text-[11px] leading-relaxed">
               <span className="font-semibold text-foreground">{t('origin.evidence')}</span>
               {finding.evidence.map((item) => <p key={item} className="mt-1 break-all text-muted-foreground">{item}</p>)}
@@ -76,9 +79,6 @@ export function FileOriginReport({ photo }: FileOriginReportProps) {
             <Fingerprint className="h-5 w-5 text-gold" />
             <h3 className="font-serif text-xl font-bold text-foreground">{t('origin.title')}</h3>
           </div>
-          <p className="mt-1 max-w-xl font-sans text-xs leading-relaxed text-muted-foreground">
-            {t('origin.description')}
-          </p>
         </div>
         <button onClick={() => setSearchOpen(true)} className="flex shrink-0 items-center justify-center gap-2 border-b border-gold/40 py-1 font-sans text-xs font-semibold text-gold hover:border-gold hover:text-foreground">
           <Search className="h-4 w-4" /> {t('origin.reverseSearch')}

@@ -138,9 +138,6 @@ export const MapLocation: React.FC<MapLocationProps> = ({ location }) => {
           <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
             {t('map.title')}
           </h3>
-          <p className="font-sans text-xs text-muted-foreground">
-            {t('map.description')}
-          </p>
         </div>
         <span className="font-mono text-xs font-bold text-rose-400 uppercase">
           {t('map.exposed')}

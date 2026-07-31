@@ -23,9 +23,6 @@ export function LeakageReport({ photo }: LeakageReportProps) {
           <h3 className="font-serif text-xl font-bold text-foreground">{t('leakage.title')}</h3>
           <span className="font-mono text-xs text-gold">{t('leakage.observed', { count: leakage.detectedCount })}</span>
         </div>
-        <p className="mt-1 font-sans text-xs leading-relaxed text-muted-foreground">
-          {t('leakage.description')}
-        </p>
       </div>
 
       <div>
