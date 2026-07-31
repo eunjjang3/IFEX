@@ -5,6 +5,8 @@ import { analyzeResolution, estimateJpegQuality } from './sensorQuality';
 import { classifyImageType } from './imageClassifier';
 import { securityConfig } from './securityConfig';
 import { normalizeStructuredMetadata } from './metadataNamespaces';
+import { detectAiGenerationMetadata, pngTextForRawTags } from './aiMetadata';
+import { extractPngTextMetadata } from './pngTextMetadata';
 
 function formatBytes(bytes: number, decimals = 2): string {
   if (bytes === 0) return '0 Bytes';
@@ -183,12 +185,20 @@ async function runUnsafeAnalysis(file: File): Promise<PhotoAnalysisWorkerRespons
       throw new Error(`Image exceeds ${securityConfig.maxImageMegapixels} megapixel limit.`);
     }
     const buffer = await file.arrayBuffer();
-    const fileOrigin = await analyzeFileOrigin(file, buffer, rawOutput, false, normalized.namespaceCounts);
+    const pngText = await extractPngTextMetadata(new Uint8Array(buffer), {
+      maxEntries: securityConfig.maxMetadataTags,
+      maxValueChars: securityConfig.maxMetadataValueChars,
+      maxTotalChars: securityConfig.maxMetadataTotalChars,
+    });
+    const pngTextTags = pngTextForRawTags(pngText);
+    if (pngTextTags) Object.assign(rawOutput, { PNGText: pngTextTags });
     const sanitized = sanitizeMetadata(rawOutput, {
       maxTags: securityConfig.maxMetadataTags,
       maxValueChars: securityConfig.maxMetadataValueChars,
       maxTotalChars: securityConfig.maxMetadataTotalChars,
     });
+    const aiGeneration = detectAiGenerationMetadata(sanitized.tags, pngText);
+    const fileOrigin = await analyzeFileOrigin(file, buffer, rawOutput, false, normalized.namespaceCounts, aiGeneration);
     return {
       requestId: 'unsafe-fallback',
       ok: true,
@@ -201,6 +211,7 @@ async function runUnsafeAnalysis(file: File): Promise<PhotoAnalysisWorkerRespons
       palette: await extractColorPalette(image, 6),
       fileOrigin,
       jpegQuality: estimateJpegQuality(buffer, file.size, width, height, fileOrigin.jpeg),
+      aiGeneration,
     };
   } finally {
     if (image) image.src = '';
@@ -228,6 +239,7 @@ export async function parsePhotoFile(file: File): Promise<ParsedPhotoData> {
     if (analysis.embeddedThumbnailBlob) embeddedThumbnailUrl = URL.createObjectURL(analysis.embeddedThumbnailBlob);
 
     const rawOutput = analysis.rawTags as Record<string, any>;
+    const aiGeneration = analysis.aiGeneration ?? detectAiGenerationMetadata(rawOutput);
     const width = analysis.width || finiteNumber(rawOutput.ExifImageWidth) || finiteNumber(rawOutput.ImageWidth);
     const height = analysis.height || finiteNumber(rawOutput.ExifImageHeight) || finiteNumber(rawOutput.ImageHeight);
     const megapixels = width && height ? `${((width * height) / 1_000_000).toFixed(1)} MP` : undefined;
@@ -263,7 +275,7 @@ export async function parsePhotoFile(file: File): Promise<ParsedPhotoData> {
       maxAperture: maxApertureFromApex(rawOutput.MaxApertureValue),
     };
     const resolutionAnalysis = analyzeResolution(width || 0, height || 0, rawOutput, camera.make, camera.model);
-    const classification = classifyImageType(file, width, height, rawOutput, camera.make, camera.model);
+    const classification = classifyImageType(file, width, height, rawOutput, camera.make, camera.model, aiGeneration);
     const exposureTime = finiteNumber(rawOutput.ExposureTime);
     const flash = flashFromExif(rawOutput.Flash);
     const shooting: ShootingParams = {
@@ -299,6 +311,7 @@ export async function parsePhotoFile(file: File): Promise<ParsedPhotoData> {
       id: createPhotoId(), file, previewUrl, fileMetrics, camera, shooting, location, advanced, leakage,
       rawTags: rawOutput, metadataLimit: analysis.metadataLimit, histogram: analysis.histogram, palette: analysis.palette,
       resolutionAnalysis, jpegQuality: analysis.jpegQuality, classification, fileOrigin: analysis.fileOrigin,
+      aiGeneration,
     };
   } catch (error) {
     revokeObjectUrl(previewUrl);

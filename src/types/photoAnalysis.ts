@@ -1,6 +1,7 @@
 import type { FileOriginReport } from './forensics';
 import type { ColorPaletteItem, HistogramData, MetadataLimitStatus } from './exif';
 import type { JpegQualityAnalysis } from '../utils/sensorQuality';
+import type { AiGenerationMetadata } from './aiMetadata';
 
 export interface PhotoAnalysisLimits {
   maxImageMegapixels: number;
@@ -32,4 +33,5 @@ export interface PhotoAnalysisWorkerResponse {
   palette?: ColorPaletteItem[];
   fileOrigin?: FileOriginReport;
   jpegQuality?: JpegQualityAnalysis;
+  aiGeneration?: AiGenerationMetadata;
 }

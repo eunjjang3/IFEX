@@ -81,5 +81,7 @@ export interface FileOriginReport {
   jpeg?: JpegStructure;
   c2pa: C2paReport;
   findings: ForensicFinding[];
+  aiMetadataDetected?: boolean;
+  aiMetadataGenerator?: string;
   generatedAt: string;
 }

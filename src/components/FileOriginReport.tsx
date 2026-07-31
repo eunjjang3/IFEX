@@ -60,6 +60,7 @@ export function FileOriginReport({ photo }: FileOriginReportProps) {
   const [copied, setCopied] = useState(false);
   const [expertMode, setExpertMode] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const aiDetected = fileOrigin.c2pa.aiGenerated || fileOrigin.c2pa.aiEdited || fileOrigin.aiMetadataDetected;
 
   const copyHash = async () => {
     await navigator.clipboard.writeText(fileOrigin.sha256);
@@ -99,8 +100,14 @@ export function FileOriginReport({ photo }: FileOriginReportProps) {
         </div>
         <div className="p-3">
           <span className="font-sans text-[10px] uppercase text-muted-foreground">{t('origin.aiProvenance')}</span>
-          <strong className={`mt-1 block font-mono text-sm ${fileOrigin.c2pa.aiGenerated || fileOrigin.c2pa.aiEdited ? 'text-amber-400' : 'text-foreground'}`}>
-            {fileOrigin.c2pa.aiGenerated ? t('origin.declaredGenerated') : fileOrigin.c2pa.aiEdited ? t('origin.declaredAssisted') : t('origin.noSignal')}
+          <strong className={`mt-1 block font-mono text-sm ${aiDetected ? 'text-amber-400' : 'text-foreground'}`}>
+            {fileOrigin.c2pa.aiGenerated
+              ? t('origin.declaredGenerated')
+              : fileOrigin.c2pa.aiEdited
+                ? t('origin.declaredAssisted')
+                : fileOrigin.aiMetadataDetected
+                  ? t('origin.metadataGenerated', { generator: fileOrigin.aiMetadataGenerator || 'AI generator' })
+                  : t('origin.noSignal')}
           </strong>
         </div>
       </div>

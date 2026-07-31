@@ -9,6 +9,8 @@ import { encodedImageDimensions } from '../utils/encodedImageDimensions';
 import { sanitizeMetadata } from '../utils/metadataSanitizer';
 import { estimateJpegQuality } from '../utils/sensorQuality';
 import { normalizeStructuredMetadata } from '../utils/metadataNamespaces';
+import { detectAiGenerationMetadata, pngTextForRawTags } from '../utils/aiMetadata';
+import { extractPngTextMetadata } from '../utils/pngTextMetadata';
 
 const scope = self as unknown as DedicatedWorkerGlobalScope;
 function finiteNumber(value: unknown): number | undefined {
@@ -138,6 +140,19 @@ async function analyze(request: PhotoAnalysisWorkerRequest): Promise<PhotoAnalys
   const declaredDimensions = metadataDimensions(rawOutput);
   assertImagePixelLimit(declaredDimensions.width, declaredDimensions.height, limits.maxImageMegapixels);
   const buffer = await file.arrayBuffer();
+  const pngText = await extractPngTextMetadata(new Uint8Array(buffer), {
+    maxEntries: limits.maxMetadataTags,
+    maxValueChars: limits.maxMetadataValueChars,
+    maxTotalChars: limits.maxMetadataTotalChars,
+  });
+  const pngTextTags = pngTextForRawTags(pngText);
+  if (pngTextTags) rawOutput = { ...rawOutput, PNGText: pngTextTags };
+  const sanitized = sanitizeMetadata(rawOutput, {
+    maxTags: limits.maxMetadataTags,
+    maxValueChars: limits.maxMetadataValueChars,
+    maxTotalChars: limits.maxMetadataTotalChars,
+  });
+  const aiGeneration = detectAiGenerationMetadata(sanitized.tags, pngText);
   const encodedDimensions = encodedImageDimensions(new Uint8Array(buffer));
   if (encodedDimensions) {
     assertImagePixelLimit(encodedDimensions.width, encodedDimensions.height, limits.maxImageMegapixels);
@@ -196,14 +211,8 @@ async function analyze(request: PhotoAnalysisWorkerRequest): Promise<PhotoAnalys
   }
 
   assertImagePixelLimit(width, height, limits.maxImageMegapixels);
-  const fileOrigin = await analyzeFileOrigin(file, buffer, rawOutput, Boolean(embeddedThumbnailBlob), namespaceCounts);
+  const fileOrigin = await analyzeFileOrigin(file, buffer, rawOutput, Boolean(embeddedThumbnailBlob), namespaceCounts, aiGeneration);
   const jpegQuality = estimateJpegQuality(buffer, file.size, width, height, fileOrigin.jpeg);
-  const sanitized = sanitizeMetadata(rawOutput, {
-    maxTags: limits.maxMetadataTags,
-    maxValueChars: limits.maxMetadataValueChars,
-    maxTotalChars: limits.maxMetadataTotalChars,
-  });
-
   return {
     requestId,
     ok: true,
@@ -217,6 +226,7 @@ async function analyze(request: PhotoAnalysisWorkerRequest): Promise<PhotoAnalys
     palette,
     fileOrigin,
     jpegQuality,
+    aiGeneration,
   };
 }
 

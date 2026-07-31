@@ -56,6 +56,7 @@ export const en = {
     noPreview: 'No preview',
     captureClassification: 'Capture Classification',
     estimatedDevice: 'Estimated Device: {{device}}',
+    estimatedGenerator: 'Detected Generator: {{generator}}',
     sensorCrop: 'Sensor & Crop Analysis',
     crop: '{{value}}× crop',
     jpegEstimate: 'JPEG Encoding Estimate',
@@ -91,6 +92,7 @@ export const en = {
     aiProvenance: 'AI provenance',
     declaredGenerated: 'DECLARED AI-GENERATED',
     declaredAssisted: 'DECLARED AI-ASSISTED',
+    metadataGenerated: 'AI METADATA · {{generator}}',
     noSignal: 'NO SIGNAL FOUND',
     fileIdentity: 'SHA-256 file identity',
     copySha: 'Copy SHA-256',
@@ -217,6 +219,16 @@ export const en = {
     actions: 'Actions',
     copyTag: 'Copy tag',
     noMatch: 'No tags matched “{{term}}”.',
+    ai: {
+      title: 'AI Generation Metadata',
+      unverified: 'Embedded generator metadata was detected. It can be edited or copied and is not cryptographic proof.',
+      positivePrompt: 'Positive prompt',
+      negativePrompt: 'Negative prompt',
+      promptTexts: 'Workflow prompt text',
+      parameters: 'Generation parameters',
+      promptGraph: 'ComfyUI prompt graph',
+      workflow: 'ComfyUI workflow',
+    },
   },
   map: {
     noGps: 'No GPS Location Embedded',
@@ -271,11 +283,11 @@ export const ko: LocaleShape<typeof en> = {
   },
   preview: {
     overlay: { none: '미리보기', clipping: '클리핑', ela: 'ELA', noise: '노이즈 잔차', gradient: 'Sobel 경사', median: 'Median 잔차', copyMove: '복사-이동', cfa: 'CFA 위상', chromaCb: 'Cb 채널', chromaCr: 'Cr 채널', jpegGhost: 'JPEG Ghost', dct: '8×8 DCT' },
-    imageAlt: '{{name}} 미리보기', unavailable: '미리보기 이용 불가', fullscreen: '전체 화면으로 보기', available: '미리보기 가능', noPreview: '미리보기 없음', captureClassification: '촬영 유형 분류', estimatedDevice: '추정 기기: {{device}}', sensorCrop: '센서 및 크롭 분석', crop: '{{value}}× 크롭', jpegEstimate: 'JPEG 인코딩 추정치', ijgEstimate: 'IJG 품질 추정치 ~{{quality}}', jpegFormat: 'JPEG 파일 형식', ratio: '비율', density: '픽셀 밀도', resolution: '해상도', format: '형식', captured: '촬영일', rawTags: '원시 태그', tags: '태그 {{count}}개',
+    imageAlt: '{{name}} 미리보기', unavailable: '미리보기 이용 불가', fullscreen: '전체 화면으로 보기', available: '미리보기 가능', noPreview: '미리보기 없음', captureClassification: '촬영 유형 분류', estimatedDevice: '추정 기기: {{device}}', estimatedGenerator: '감지된 생성기: {{generator}}', sensorCrop: '센서 및 크롭 분석', crop: '{{value}}× 크롭', jpegEstimate: 'JPEG 인코딩 추정치', ijgEstimate: 'IJG 품질 추정치 ~{{quality}}', jpegFormat: 'JPEG 파일 형식', ratio: '비율', density: '픽셀 밀도', resolution: '해상도', format: '형식', captured: '촬영일', rawTags: '원시 태그', tags: '태그 {{count}}개',
   },
   origin: {
     state: { observed: '관찰됨', consistent: '일치함', suspicious: '확인 필요', inconclusive: '데이터 없음', unsupported: '지원 안 함' },
-    showEvidence: '근거 보기', hideEvidence: '근거 닫기', evidence: '근거 데이터', title: '파일 출처', description: '파일 컨테이너, 메타데이터, 인코딩 구조 및 출처 신호.', reverseSearch: '역이미지 검색', binaryFormat: '바이너리 형식', signatureMatches: '파일 시그니처와 확장자가 일치함', identityMismatch: '파일 시그니처 불일치 감지', contentCredentials: 'Content Credentials', noVerifiedGenerator: '검증된 생성기 없음', aiProvenance: 'AI 출처', declaredGenerated: 'AI 생성으로 선언됨', declaredAssisted: 'AI 보조로 선언됨', noSignal: 'AI 생성 신호 미검출', fileIdentity: 'SHA-256 파일 식별자', copySha: 'SHA-256 복사', findings: '분석 결과', expertData: '기술 데이터', metadataNamespaces: '메타데이터 네임스페이스', jpegMarkerMap: 'JPEG 마커 맵', offset: '오프셋', marker: '마커', segment: '세그먼트', bytes: '바이트', quantizationTables: '양자화 테이블', table: '테이블 {{id}} · {{precision}}비트', aboutCredentials: 'Content Credentials 안내', preparingSearch: '역이미지 검색 준비 중…',
+    showEvidence: '근거 보기', hideEvidence: '근거 닫기', evidence: '근거 데이터', title: '파일 출처', description: '파일 컨테이너, 메타데이터, 인코딩 구조 및 출처 신호.', reverseSearch: '역이미지 검색', binaryFormat: '바이너리 형식', signatureMatches: '파일 시그니처와 확장자가 일치함', identityMismatch: '파일 시그니처 불일치 감지', contentCredentials: 'Content Credentials', noVerifiedGenerator: '검증된 생성기 없음', aiProvenance: 'AI 출처', declaredGenerated: 'AI 생성으로 선언됨', declaredAssisted: 'AI 보조로 선언됨', metadataGenerated: 'AI 메타데이터 · {{generator}}', noSignal: 'AI 생성 신호 미검출', fileIdentity: 'SHA-256 파일 식별자', copySha: 'SHA-256 복사', findings: '분석 결과', expertData: '기술 데이터', metadataNamespaces: '메타데이터 네임스페이스', jpegMarkerMap: 'JPEG 마커 맵', offset: '오프셋', marker: '마커', segment: '세그먼트', bytes: '바이트', quantizationTables: '양자화 테이블', table: '테이블 {{id}} · {{precision}}비트', aboutCredentials: 'Content Credentials 안내', preparingSearch: '역이미지 검색 준비 중…',
   },
   pixel: {
     title: '픽셀 랩', description: '픽셀 레벨 진단 오버레이 맵.', jpegRequired: '{{name}}은(는) JPEG 형식에서만 지원됩니다', overlayOpacity: '오버레이 불투명도', status: { idle: '대기', analyzing: '분석 중', ready: '완료', unsupported: '지원 안 함', error: '오류' },
@@ -289,7 +301,7 @@ export const ko: LocaleShape<typeof en> = {
   advanced: {
     title: '고급 IPTC, XMP 및 ICC 메타데이터', description: '저작권, 편집 기록, 색상 프로필 및 내장 미리보기.', iptcTitle: 'IPTC 편집 메타데이터', iptcSubtitle: '보도 및 저작권 데이터 규격', photographer: '촬영자 / 작성자:', copyright: '저작권 고지:', caption: '캡션 / 설명:', keywords: '키워드:', notSet: '설정 안 됨', noCaption: '내장 캡션 없음', xmpTitle: 'XMP 확장 메타데이터', xmpSubtitle: 'Adobe 및 편집 프로그램 작업 흔적', creatorSoftware: '편집 / 생성 소프트웨어:', directExport: '없음 / 센서 직접 출력', userRating: 'XMP 사용자 평점:', stars: '★ {{count}}점', unrated: '평가 안 됨', adobeFootprint: 'Photoshop / Lightroom 흔적:', adobeDetected: 'Adobe Lightroom/Photoshop 작업 이력 감지', adobeNotDetected: 'Adobe XMP 작업 이력 미감지', iccTitle: 'ICC 색상 프로필 및 색 공간', iccSubtitle: '색역 및 색 표현', colorSpace: '색 공간:', bitDepth: '비트 심도:', bitsPerChannel: '채널당 {{value}}비트', profileDescriptor: '프로필 설명:', thumbnailTitle: '내장 EXIF 썸네일', thumbnailSubtitle: '카메라 내장 미리보기', thumbnailAlt: '내장 EXIF 썸네일', embeddedPreview: '내장 EXIF 미리보기', extractedPreview: '추출된 EXIF 미리보기', noThumbnail: 'EXIF 블록에 별도의 내장 썸네일 스트림이 없습니다.',
   },
-  raw: { title: '원시 메타데이터 태그 검사', count: 'EXIF, TIFF, IPTC 및 XMP 태그 {{count}}개.', exportJson: 'JSON 내보내기', limits: 'EXIF, TIFF, IPTC 및 XMP 태그 {{count}}개 (요약 적용)', searchPlaceholder: '메타데이터 태그 검색…', key: '태그 필드 키', value: '추출된 원시 값', actions: '작업', copyTag: '태그 복사', noMatch: '“{{term}}”와 일치하는 태그가 없습니다.' },
+  raw: { title: '원시 메타데이터 태그 검사', count: 'EXIF, TIFF, IPTC 및 XMP 태그 {{count}}개.', exportJson: 'JSON 내보내기', limits: 'EXIF, TIFF, IPTC 및 XMP 태그 {{count}}개 (요약 적용)', searchPlaceholder: '메타데이터 태그 검색…', key: '태그 필드 키', value: '추출된 원시 값', actions: '작업', copyTag: '태그 복사', noMatch: '“{{term}}”와 일치하는 태그가 없습니다.', ai: { title: 'AI 생성 메타데이터', unverified: '내장된 생성기 메타데이터를 감지했습니다. 이 정보는 편집하거나 복사할 수 있으며 암호학적 증명이 아닙니다.', positivePrompt: '긍정 프롬프트', negativePrompt: '부정 프롬프트', promptTexts: '워크플로 프롬프트 텍스트', parameters: '생성 파라미터', promptGraph: 'ComfyUI 프롬프트 그래프', workflow: 'ComfyUI 워크플로' } },
   map: { noGps: 'GPS 위치 정보 없음', noGpsDescription: '이미지 메타데이터에 내장된 GPS 좌표가 없습니다.', title: '위치 및 지도', description: '이미지 EXIF의 GPS 좌표.', exposed: 'GPS 노출됨', paused: '외부 지도 일시 중지', privacyNote: 'OpenStreetMap 타일 서버에 IP 주소와 대략적인 좌표가 전송되며, 이미지 파일은 전송되지 않습니다.', load: '외부 지도 불러오기', coordinates: 'GPS 좌표', latitude: '위도', longitude: '경도', altitude: '고도: {{value}}미터', photoLocation: 'EXIF 사진 위치', reverseGeocoding: '역지오코딩', fetching: '가져오는 중…', fetchAddress: '주소 가져오기 (Nominatim)', fetchingDetails: '주소 정보 가져오는 중…', fetchPrompt: '정확한 좌표를 Nominatim에 보내 주소를 가져옵니다.', addressCredit: '주소 데이터 © OpenStreetMap 기여자', providerNotice: '선택한 지도 서비스에 해당 GPS 좌표가 전송됩니다.' },
   search: { title: '역이미지 검색', description: '메타데이터를 제거한 검색용 사본을 만든 뒤 선택한 외부 서비스에 직접 업로드합니다.', close: '역이미지 검색 닫기', original: '원본', originalNote: 'EXIF, GPS, XMP 및 식별자가 포함될 수 있음', copy: '검색용 사본', preparing: '로컬에서 준비 중…', unavailable: '사용할 수 없음', copyDetails: '메타데이터 제거 · 최대 {{dimension}}px · JPEG {{quality}}%', localNote: 'IFEX는 검색용 사본을 로컬에서 만듭니다. 외부 서비스에 업로드하면 해당 제공자에게 사본이 전송됩니다.', consent: '검색용 이미지를 선택한 외부 서비스에 전송하여 검색하는 것에 동의합니다.', downloaded: '사본 다운로드됨', prepareFor: '{{service}}용 사본 준비' },
 };
@@ -304,11 +316,11 @@ export const ja: LocaleShape<typeof en> = {
   },
   preview: {
     overlay: { none: 'プレビュー', clipping: 'クリッピング', ela: 'ELA', noise: 'ノイズ残差', gradient: 'Sobel勾配', median: 'Median残差', copyMove: 'コピー移動', cfa: 'CFA位相', chromaCb: 'Cbチャンネル', chromaCr: 'Crチャンネル', jpegGhost: 'JPEG Ghost', dct: '8×8 DCT' },
-    imageAlt: '{{name}}のプレビュー', unavailable: 'プレビュー非対応', fullscreen: '全画面表示', available: 'プレビュー可能', noPreview: 'プレビューなし', captureClassification: '撮影種別分類', estimatedDevice: '推定デバイス: {{device}}', sensorCrop: 'センサー・クロップ解析', crop: '{{value}}× クロップ', jpegEstimate: 'JPEGエンコード推定', ijgEstimate: 'IJG品質推定 ~{{quality}}', jpegFormat: 'JPEGファイル形式', ratio: 'アスペクト比', density: 'ピクセル密度', resolution: '解像度', format: 'ファイル形式', captured: '撮影日時', rawTags: 'RAWメタデータ', tags: 'タグ {{count}}件',
+    imageAlt: '{{name}}のプレビュー', unavailable: 'プレビュー非対応', fullscreen: '全画面表示', available: 'プレビュー可能', noPreview: 'プレビューなし', captureClassification: '撮影種別分類', estimatedDevice: '推定デバイス: {{device}}', estimatedGenerator: '検出された生成元: {{generator}}', sensorCrop: 'センサー・クロップ解析', crop: '{{value}}× クロップ', jpegEstimate: 'JPEGエンコード推定', ijgEstimate: 'IJG品質推定 ~{{quality}}', jpegFormat: 'JPEGファイル形式', ratio: 'アスペクト比', density: 'ピクセル密度', resolution: '解像度', format: 'ファイル形式', captured: '撮影日時', rawTags: 'RAWメタデータ', tags: 'タグ {{count}}件',
   },
   origin: {
     state: { observed: '検出', consistent: '一致', suspicious: '要確認', inconclusive: 'データなし', unsupported: '非対応' },
-    showEvidence: '根拠を表示', hideEvidence: '根拠を閉じる', evidence: '根拠データ', title: 'ファイル構造・由来', description: 'ファイルコンテナ、メタデータ、エンコード構造、来歴信号。', reverseSearch: '逆画像検索', binaryFormat: 'バイナリ形式', signatureMatches: 'マジックバイトと拡張子が一致', identityMismatch: 'ファイルシグネチャの不一致を検出', contentCredentials: 'Content Credentials', noVerifiedGenerator: '検証済み生成元なし', aiProvenance: 'AI来歴', declaredGenerated: 'AI生成として宣言済み', declaredAssisted: 'AI補助として宣言済み', noSignal: 'AI生成シグナル未検出', fileIdentity: 'SHA-256 ハッシュ値', copySha: 'SHA-256をコピー', findings: '解析結果', expertData: '技術データ', metadataNamespaces: 'メタデータ名前空間', jpegMarkerMap: 'JPEGマーカーマップ', offset: 'オフセット', marker: 'マーカー', segment: 'セグメント', bytes: 'バイト', quantizationTables: '量子化テーブル', table: 'テーブル {{id}} · {{precision}}ビット', aboutCredentials: 'Content Credentialsについて', preparingSearch: '画像検索を準備中…',
+    showEvidence: '根拠を表示', hideEvidence: '根拠を閉じる', evidence: '根拠データ', title: 'ファイル構造・由来', description: 'ファイルコンテナ、メタデータ、エンコード構造、来歴信号。', reverseSearch: '逆画像検索', binaryFormat: 'バイナリ形式', signatureMatches: 'マジックバイトと拡張子が一致', identityMismatch: 'ファイルシグネチャの不一致を検出', contentCredentials: 'Content Credentials', noVerifiedGenerator: '検証済み生成元なし', aiProvenance: 'AI来歴', declaredGenerated: 'AI生成として宣言済み', declaredAssisted: 'AI補助として宣言済み', metadataGenerated: 'AIメタデータ · {{generator}}', noSignal: 'AI生成シグナル未検出', fileIdentity: 'SHA-256 ハッシュ値', copySha: 'SHA-256をコピー', findings: '解析結果', expertData: '技術データ', metadataNamespaces: 'メタデータ名前空間', jpegMarkerMap: 'JPEGマーカーマップ', offset: 'オフセット', marker: 'マーカー', segment: 'セグメント', bytes: 'バイト', quantizationTables: '量子化テーブル', table: 'テーブル {{id}} · {{precision}}ビット', aboutCredentials: 'Content Credentialsについて', preparingSearch: '画像検索を準備中…',
   },
   pixel: {
     title: 'ピクセルラボ', description: 'ピクセルレベル診断オーバーレイマップ。', jpegRequired: '{{name}}はJPEG形式のみ対応しています', overlayOpacity: '不透明度', status: { idle: '待機', analyzing: '解析中', ready: '完了', unsupported: '非対応', error: 'エラー' },
@@ -321,7 +333,7 @@ export const ja: LocaleShape<typeof en> = {
   },
   advanced: {
     title: '高度なIPTC・XMP・ICCメタデータ', description: '著作権、編集履歴、カラープロファイル、埋め込みプレビュー。', iptcTitle: 'IPTC編集メタデータ', iptcSubtitle: '報道・著作権データ規格', photographer: '撮影者 / Byline:', copyright: '著作権表示:', caption: 'キャプション / 概要:', keywords: 'キーワード:', notSet: '未設定', noCaption: '내장 캡션 없음', xmpTitle: 'XMP拡張メタデータ', xmpSubtitle: 'Adobe・編集ツールの作業痕跡', creatorSoftware: '編集 / 作成ソフトウェア:', directExport: 'なし / センサー直接出力', userRating: 'XMPユーザー評価:', stars: '★ {{count}}점', unrated: '未評価', adobeFootprint: 'Photoshop / Lightroom痕跡:', adobeDetected: 'Adobe Lightroom/Photoshop作業履歴を検出', adobeNotDetected: 'Adobe XMP作業履歴なし', iccTitle: 'ICCカラープロファイル・色空間', iccSubtitle: '色域・色表現', colorSpace: '色空間:', bitDepth: 'ビット深度:', bitsPerChannel: 'チャンネルあたり{{value}}ビット', profileDescriptor: 'Profile Descriptor:', thumbnailTitle: 'Embedded EXIF Thumbnail', thumbnailSubtitle: 'Camera Embedded Preview', thumbnailAlt: 'Embedded EXIF Thumbnail', embeddedPreview: 'Embedded EXIF Preview', extractedPreview: 'Extracted EXIF preview', noThumbnail: 'No separate embedded thumbnail stream stored in EXIF block.' },
-  raw: { title: 'RAWメタデータタグ検査', count: 'EXIF、TIFF、IPTC、XMPタグ {{count}}件。', exportJson: 'JSONを書き出す', limits: 'EXIF、TIFF、IPTC、XMPタグ {{count}}件（要約適用）', searchPlaceholder: '메타데이터 태그 검색…', key: '태그 필드 키', value: '추출된 원시 값', actions: '작업', copyTag: '태그 복사', noMatch: '“{{term}}”와 일치하는 태그가 없습니다.' },
+  raw: { title: 'RAWメタデータタグ検査', count: 'EXIF、TIFF、IPTC、XMPタグ {{count}}件。', exportJson: 'JSONを書き出す', limits: 'EXIF、TIFF、IPTC、XMPタグ {{count}}件（要約適用）', searchPlaceholder: 'メタデータタグを検索…', key: 'タグフィールド', value: '抽出された値', actions: '操作', copyTag: 'タグをコピー', noMatch: '“{{term}}”に一致するタグはありません。', ai: { title: 'AI生成メタデータ', unverified: '埋め込み生成元メタデータを検出しました。この情報は編集・複製可能で、暗号学的証明ではありません。', positivePrompt: 'ポジティブプロンプト', negativePrompt: 'ネガティブプロンプト', promptTexts: 'ワークフロープロンプトテキスト', parameters: '生成パラメーター', promptGraph: 'ComfyUIプロンプトグラフ', workflow: 'ComfyUIワークフロー' } },
   map: { noGps: '埋め込みGPS位置なし', noGpsDescription: '画像メタデータにGPS座標がありません。', title: '位置情報・地図', description: '画像EXIFのGPS座標。', exposed: 'GPS露出', paused: '外部地図を一時停止中', privacyNote: 'OpenStreetMapのタイルサーバーへIPアドレスとおおよその写真位置が送信されます。画像ファイル自体は送信されません。', load: '外部地図を読み込む', coordinates: 'GPS座標', latitude: '緯度', longitude: '経度', altitude: '高度: {{value}}メートル', photoLocation: 'EXIF写真位置', reverseGeocoding: '逆ジオコーディング', fetching: '가져오는 중…', fetchAddress: '住所を取得 (Nominatim)', fetchingDetails: '住所情報を取得中…', fetchPrompt: '正確な座標をNominatimへ送り、住所を取得します。', addressCredit: '住所データ © OpenStreetMap contributors', providerNotice: '選択した地図サービスへこの座標が送信されます。' },
   search: { title: '画像で検索', description: 'メタデータを除いた検索用コピーを作成し、選択した外部サービスへ手動でアップロードします。', close: '画像検索を閉じる', original: '原本', originalNote: 'EXIF、GPS、XMP 및 식별자가 포함될 수 있음', copy: '検索用コピー', preparing: 'ローカルで準備中…', unavailable: '利用不可', copyDetails: 'メタデータ除去 · 最大{{dimension}}px · JPEG {{quality}}%', localNote: 'IFEXは検索用コピーをローカルで作成します。外部サービスへアップロードすると、その提供者へコピーが送信されます。', consent: '検索用画像を選択した外部サービスへ送信して検索することに同意します。', downloaded: 'コピーをダウンロード済み', prepareFor: '{{service}}용 사본 준비' },
 };

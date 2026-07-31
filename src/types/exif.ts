@@ -1,6 +1,7 @@
 import type { ImageClassification } from '../utils/imageClassifier';
 import type { ResolutionAnalysis, JpegQualityAnalysis } from '../utils/sensorQuality';
 import type { FileOriginReport } from './forensics';
+import type { AiGenerationMetadata } from './aiMetadata';
 
 export interface LeakageFinding {
   id: string;
@@ -145,4 +146,5 @@ export interface ParsedPhotoData {
   jpegQuality?: JpegQualityAnalysis;
   classification?: ImageClassification;
   fileOrigin: FileOriginReport;
+  aiGeneration?: AiGenerationMetadata;
 }

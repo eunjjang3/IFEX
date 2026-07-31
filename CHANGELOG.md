@@ -6,6 +6,7 @@ All notable IFEX changes are recorded here. The project follows semantic version
 
 ### Added
 
+- Bounded PNG text extraction and strict A1111-compatible, ComfyUI, and NovelAI generation-metadata detection, with prompts and settings separated inside Raw Tags.
 - Version-gated GitHub release automation for unsigned macOS and Windows archives, multi-platform GHCR images, checksums, and provenance attestations.
 - Repository screenshots and a product-focused README overview generated from the bundled local sample.
 
