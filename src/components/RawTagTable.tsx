@@ -71,9 +71,6 @@ export const RawTagTable: React.FC<RawTagTableProps> = ({ photo }) => {
           <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
             {t('raw.title')}
           </h3>
-          <p className="font-sans text-xs text-muted-foreground">
-            {t('raw.count', { count: tagEntries.length })}
-          </p>
         </div>
 
         <div className="flex items-center gap-2">
