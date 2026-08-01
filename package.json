@@ -1,7 +1,7 @@
 {
   "name": "ifex",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local-first browser and desktop image forensics with hardened parsing and re-encoded previews.",
   "license": "MIT",
   "type": "module",
