@@ -1,5 +1,7 @@
+import type { AiGenerationMetadata } from '../types/aiMetadata';
+
 export interface ImageClassification {
-  type: 'Camera Photo' | 'Device Screenshot' | 'Unclassified Image';
+  type: 'AI Generated Image' | 'Camera Photo' | 'Device Screenshot' | 'Unclassified Image';
   confidence: 'High' | 'Medium' | 'Low';
   summary: string;
   reasons: string[];
@@ -34,7 +36,17 @@ export function classifyImageType(
   rawTags: Record<string, any>,
   cameraMake?: string,
   cameraModel?: string,
+  aiGeneration?: AiGenerationMetadata,
 ): ImageClassification {
+  if (aiGeneration?.detected) {
+    return {
+      type: 'AI Generated Image',
+      confidence: 'High',
+      summary: `Embedded metadata declares output from ${aiGeneration.generatorLabel || 'an AI image generator'}. Metadata is editable and is not cryptographic proof.`,
+      reasons: aiGeneration.sources.map((source) => `${source.container}: ${source.key}`),
+      deviceEstimate: aiGeneration.generatorLabel,
+    };
+  }
   const cameraReasons: string[] = [];
   const screenshotReasons: string[] = [];
   const captureParameters = [

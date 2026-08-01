@@ -119,5 +119,7 @@ export interface FileOriginReport {
   c2pa: C2paReport;
   aigc: AigcMetadataReport;
   findings: ForensicFinding[];
+  aiMetadataDetected?: boolean;
+  aiMetadataGenerator?: string;
   generatedAt: string;
 }

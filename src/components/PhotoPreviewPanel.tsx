@@ -75,7 +75,9 @@ export const PhotoPreviewPanel: React.FC<PhotoPreviewPanelProps> = ({ photo, ove
           <div className="space-y-1.5 border-b border-border py-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5 font-serif font-bold text-foreground">
-                {classification.type === 'Device Screenshot' ? (
+                {classification.type === 'AI Generated Image' ? (
+                  <Sparkles className="h-4 w-4 text-fuchsia-400" />
+                ) : classification.type === 'Device Screenshot' ? (
                   <Smartphone className="h-4 w-4 text-amber-400" />
                 ) : classification.type === 'Camera Photo' ? (
                   <Camera className="h-4 w-4 text-emerald-400" />
@@ -93,7 +95,9 @@ export const PhotoPreviewPanel: React.FC<PhotoPreviewPanelProps> = ({ photo, ove
             </p>
             {classification.deviceEstimate && (
               <div className="font-mono text-[10px] text-cyan-300">
-                {t('preview.estimatedDevice', { device: classification.deviceEstimate })}
+                {classification.type === 'AI Generated Image'
+                  ? t('preview.estimatedGenerator', { generator: classification.deviceEstimate })
+                  : t('preview.estimatedDevice', { device: classification.deviceEstimate })}
               </div>
             )}
           </div>

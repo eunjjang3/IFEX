@@ -2,6 +2,12 @@
 
 All notable IFEX changes are recorded here. The project follows semantic versioning once a version is tagged and released.
 
+## Unreleased
+
+### Added
+
+- Bounded PNG text extraction and strict A1111-compatible, ComfyUI, and NovelAI generation-metadata detection, with prompts and settings separated inside Raw Tags.
+
 ## 0.1.1 - 2026-07-30
 
 ### Added

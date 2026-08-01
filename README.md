@@ -54,7 +54,7 @@ If IFEX is useful to your investigations, research, or photography workflow, con
 | **Camera Specs** | Camera and lens identity, serials, focal length, firmware, sensor evidence, crop factor, and JPEG quality estimate |
 | **GPS Map** | Embedded coordinates, opt-in OpenStreetMap tiles, opt-in reverse geocoding, and external map links |
 | **IPTC & XMP** | Structured editorial, rights, provenance, and application metadata |
-| **Raw Tags** | Searchable source-level metadata values and namespaces |
+| **Raw Tags** | Searchable source-level metadata plus separated A1111-compatible, ComfyUI, and NovelAI generation metadata when structurally detected |
 | **Pixel Lab** | Clipping, ELA, residuals, gradients, copy-move candidates, CFA phase, chroma planes, JPEG Ghost, and 8×8 DCT energy |
 
 ### Pixel Lab

@@ -44,4 +44,28 @@ describe('classifyImageType', () => {
     );
     expect(result.type).toBe('Camera Photo');
   });
+
+  it('prioritizes strict AI generation metadata over camera-like tags', () => {
+    const result = classifyImageType(
+      imageFile('generated.png', 'image/png'),
+      1024,
+      1024,
+      { Model: 'Camera Model', ISO: 100, FNumber: 2.8 },
+      undefined,
+      undefined,
+      {
+        detected: true,
+        generators: ['automatic1111'],
+        generatorLabel: 'AUTOMATIC1111-compatible',
+        confidence: 'medium',
+        promptTexts: [],
+        parameters: {},
+        sources: [{ container: 'png-text', key: 'parameters' }],
+        limitations: [],
+      },
+    );
+
+    expect(result.type).toBe('AI Generated Image');
+    expect(result.deviceEstimate).toBe('AUTOMATIC1111-compatible');
+  });
 });

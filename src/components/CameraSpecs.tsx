@@ -18,9 +18,6 @@ export const CameraSpecs: React.FC<CameraSpecsProps> = ({ photo }) => {
         <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
           {t('camera.title')}
         </h3>
-        <p className="font-sans text-xs text-muted-foreground">
-          {t('camera.description')}
-        </p>
       </div>
 
       {/* Hardware Device Summary Banner */}

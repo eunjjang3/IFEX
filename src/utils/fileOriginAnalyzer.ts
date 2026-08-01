@@ -8,6 +8,7 @@ import { verifyC2pa } from './c2paVerifier';
 import { detectFileTypeFromBytes } from './fileSignature';
 import { parseJpegStructure } from './jpegStructure';
 import type { MetadataNamespaceCounts } from './metadataNamespaces';
+import type { AiGenerationMetadata } from '../types/aiMetadata';
 import { analyzeAigcMetadata } from './aigcMetadata';
 
 export { detectFileType, detectFileTypeFromBytes } from './fileSignature';
@@ -47,6 +48,7 @@ export async function analyzeFileOrigin(
   rawTags: Record<string, unknown>,
   hasThumbnail: boolean,
   namespaceCounts?: MetadataNamespaceCounts,
+  aiGeneration?: AiGenerationMetadata,
 ): Promise<FileOriginReport> {
   const bytes = new Uint8Array(buffer);
   const fileType = await detectFileTypeFromBytes(file, bytes);
@@ -57,6 +59,21 @@ export async function analyzeFileOrigin(
   const sha256 = Array.from(new Uint8Array(digest)).map((byte) => byte.toString(16).padStart(2, '0')).join('');
   const c2pa = await verifyC2pa(file, fileType.actualMime);
   const findings: ForensicFinding[] = [];
+
+  if (aiGeneration?.detected) {
+    findings.push(finding({
+      id: 'ai-generation-metadata',
+      state: 'observed',
+      confidence: 'medium',
+      title: 'AI generation metadata',
+      summary: `Embedded metadata matches ${aiGeneration.generatorLabel || 'a known AI generator'} output.`,
+      evidence: [
+        aiGeneration.generatorLabel || 'Known AI generator metadata',
+        ...aiGeneration.sources.map((source) => `${source.container}: ${source.key}`),
+      ],
+      limitations: aiGeneration.limitations,
+    }));
+  }
 
   findings.push(finding({
     id: 'file-identity',
@@ -144,5 +161,10 @@ export async function analyzeFileOrigin(
     }));
   }
 
-  return { sha256, fileType, metadata, jpeg, c2pa, aigc, findings, generatedAt: new Date().toISOString() };
+  return {
+    sha256, fileType, metadata, jpeg, c2pa, aigc, findings,
+    aiMetadataDetected: Boolean(aiGeneration?.detected),
+    aiMetadataGenerator: aiGeneration?.generatorLabel,
+    generatedAt: new Date().toISOString(),
+  };
 }

@@ -64,9 +64,6 @@ export function PixelLab({ photo, mode, opacity, state, onModeChange, onOpacityC
           <h3 className="font-serif text-xl font-bold text-foreground">{t('pixel.title')}</h3>
           <span className="font-mono text-[10px] uppercase text-muted-foreground">{t(active.evidenceKey)}</span>
         </div>
-        <p className="mt-1 font-sans text-xs leading-relaxed text-muted-foreground">
-          {t('pixel.description')}
-        </p>
       </div>
 
       <div className="grid grid-cols-2 border-b border-border sm:grid-cols-4">

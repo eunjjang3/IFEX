@@ -21,9 +21,6 @@ export const AdvancedMetadata: React.FC<AdvancedMetadataProps> = ({ photo }) => 
         <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
           {t('advanced.title')}
         </h3>
-        <p className="font-sans text-xs text-muted-foreground">
-          {t('advanced.description')}
-        </p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

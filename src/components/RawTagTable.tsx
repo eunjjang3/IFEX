@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import type { ParsedPhotoData } from '../types/exif';
-import { Search, Download, Copy, Check } from 'lucide-react';
+import { Search, Download, Copy, Check, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 interface RawTagTableProps {
@@ -13,6 +13,7 @@ export const RawTagTable: React.FC<RawTagTableProps> = ({ photo }) => {
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const rawTags = photo.rawTags;
+  const ai = photo.aiGeneration;
 
   const tagEntries = useMemo(() => {
     return Object.entries(rawTags).map(([key, val]) => {
@@ -70,9 +71,6 @@ export const RawTagTable: React.FC<RawTagTableProps> = ({ photo }) => {
           <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
             {t('raw.title')}
           </h3>
-          <p className="font-sans text-xs text-muted-foreground">
-            {t('raw.count', { count: tagEntries.length })}
-          </p>
         </div>
 
         <div className="flex items-center gap-2">
@@ -85,6 +83,91 @@ export const RawTagTable: React.FC<RawTagTableProps> = ({ photo }) => {
           </button>
         </div>
       </div>
+
+      {ai?.detected && (
+        <section className="overflow-hidden rounded-xl border border-fuchsia-400/35 bg-fuchsia-500/5" aria-labelledby="ai-metadata-title">
+          <div className="flex flex-wrap items-start justify-between gap-3 border-b border-fuchsia-400/20 p-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-fuchsia-300" />
+                <h4 id="ai-metadata-title" className="font-serif text-base font-bold text-foreground">{t('raw.ai.title')}</h4>
+              </div>
+              <p className="mt-1 font-sans text-xs text-muted-foreground">{t('raw.ai.unverified')}</p>
+            </div>
+            <span className="border border-fuchsia-400/30 bg-fuchsia-400/10 px-2 py-1 font-mono text-[10px] uppercase text-fuchsia-200">
+              {ai.generatorLabel}
+            </span>
+          </div>
+
+          <div className="space-y-4 p-4">
+            {ai.positivePrompt && (
+              <div>
+                <div className="mb-1 flex items-center justify-between gap-2">
+                  <h5 className="font-sans text-[11px] font-semibold uppercase text-fuchsia-200">{t('raw.ai.positivePrompt')}</h5>
+                  <button onClick={() => handleCopyTag('ai-positive', ai.positivePrompt!)} className="p-1 text-muted-foreground hover:text-foreground" title={t('raw.copyTag')}>
+                    {copiedKey === 'ai-positive' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+                <p className="whitespace-pre-wrap border-l border-fuchsia-400/30 pl-3 font-mono text-xs leading-relaxed text-foreground [overflow-wrap:anywhere]">{ai.positivePrompt}</p>
+              </div>
+            )}
+
+            {ai.negativePrompt && (
+              <div>
+                <div className="mb-1 flex items-center justify-between gap-2">
+                  <h5 className="font-sans text-[11px] font-semibold uppercase text-rose-300">{t('raw.ai.negativePrompt')}</h5>
+                  <button onClick={() => handleCopyTag('ai-negative', ai.negativePrompt!)} className="p-1 text-muted-foreground hover:text-foreground" title={t('raw.copyTag')}>
+                    {copiedKey === 'ai-negative' ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
+                  </button>
+                </div>
+                <p className="whitespace-pre-wrap border-l border-rose-400/30 pl-3 font-mono text-xs leading-relaxed text-foreground [overflow-wrap:anywhere]">{ai.negativePrompt}</p>
+              </div>
+            )}
+
+            {!ai.positivePrompt && ai.promptTexts.length > 0 && (
+              <div>
+                <h5 className="mb-2 font-sans text-[11px] font-semibold uppercase text-fuchsia-200">{t('raw.ai.promptTexts')}</h5>
+                <div className="space-y-2">
+                  {ai.promptTexts.map((prompt, index) => (
+                    <p key={`${index}-${prompt}`} className="whitespace-pre-wrap border-l border-fuchsia-400/30 pl-3 font-mono text-xs text-foreground [overflow-wrap:anywhere]">{prompt}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {Object.keys(ai.parameters).length > 0 && (
+              <div>
+                <h5 className="mb-2 font-sans text-[11px] font-semibold uppercase text-fuchsia-200">{t('raw.ai.parameters')}</h5>
+                <dl className="grid grid-cols-1 border-l border-t border-border sm:grid-cols-2 lg:grid-cols-3">
+                  {Object.entries(ai.parameters).map(([key, value]) => (
+                    <div key={key} className="border-b border-r border-border p-2">
+                      <dt className="font-mono text-[10px] text-muted-foreground">{key}</dt>
+                      <dd className="mt-1 break-all font-mono text-xs text-foreground">{String(value)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
+
+            {(['promptGraph', 'workflow'] as const).map((key) => ai[key] !== undefined && (
+              <details key={key} className="border border-border bg-background/30">
+                <summary className="cursor-pointer px-3 py-2 font-sans text-xs font-semibold text-foreground">
+                  {key === 'promptGraph' ? t('raw.ai.promptGraph') : t('raw.ai.workflow')}
+                </summary>
+                <pre className="max-h-72 overflow-auto border-t border-border p-3 font-mono text-[10px] leading-relaxed text-muted-foreground">{JSON.stringify(ai[key], null, 2)}</pre>
+              </details>
+            ))}
+
+            <div className="flex flex-wrap gap-2">
+              {ai.sources.map((source) => (
+                <span key={`${source.container}-${source.key}`} className="border border-border px-2 py-1 font-mono text-[10px] text-muted-foreground">
+                  {source.container} · {source.key}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {photo.metadataLimit.truncated && (
         <div role="status" className="border border-amber-500/35 bg-amber-500/5 p-3 font-sans text-xs text-amber-200">
