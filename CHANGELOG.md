@@ -2,11 +2,12 @@
 
 All notable IFEX changes are recorded here. The project follows semantic versioning once a version is tagged and released.
 
-## Unreleased
+## 0.1.2 - 2026-08-01
 
 ### Added
 
 - Bounded PNG text extraction and strict A1111-compatible, ComfyUI, and NovelAI generation-metadata detection, with prompts and settings separated inside Raw Tags.
+- AIGC provenance declarations and provider attribution are surfaced separately from cryptographically validated C2PA evidence.
 
 ## 0.1.1 - 2026-07-30
 
