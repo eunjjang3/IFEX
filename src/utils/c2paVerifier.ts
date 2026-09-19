@@ -332,11 +332,6 @@ export function reportFromManifestStore(store: ManifestStore): C2paReport {
 
 export async function verifyC2pa(file: File, mimeType: string): Promise<C2paReport> {
   try {
-    const module = await import('@contentauth/c2pa-web');
-    if (!module.isSupportedReaderFormat(mimeType)) {
-      return emptyReport('unsupported', `C2PA validation is not available for ${mimeType}.`);
-    }
-
     const sdk = await getSdk();
     const reader = await sdk.reader.fromBlob(mimeType, file);
     if (!reader) {
@@ -354,6 +349,10 @@ export async function verifyC2pa(file: File, mimeType: string): Promise<C2paRepo
       }
     }
   } catch (error) {
+    // c2pa-web 0.14 delegates format support to the WASM reader.
+    if (error instanceof Error && /^C2pa\(UnsupportedType(?:\(|\))/.test(error.message)) {
+      return emptyReport('unsupported', `C2PA validation is not available for ${mimeType}.`);
+    }
     return emptyReport('error', `C2PA validation could not complete: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 }
