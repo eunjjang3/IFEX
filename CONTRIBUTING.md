@@ -62,6 +62,8 @@ npm run check:licenses
 
 Commit both generated copies with the dependency and lockfile change. `npm run verify` rejects stale license output.
 
+For overlapping Dependabot updates, validate the combined lockfile and run `npm audit` before merging; separate PR checks do not prove the combined dependency graph. Remove unused dependencies instead of upgrading them. CI also checks Pages configuration, Docker Buildx setup, and the release artifact upload/download round trip without publishing a release or deploying the site.
+
 If a production package tarball has no top-level license or notice file, add an exact version entry with provenance to `third_party/runtime/license-fallbacks.json` and place the reviewed text under `third_party/runtime/license-fallbacks/`. The generator rejects metadata-only packages without this explicit fallback.
 
 ## Pull requests
