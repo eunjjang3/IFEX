@@ -32,7 +32,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@contentauth/c2pa-web": "^0.14.5",
+    "@contentauth/c2pa-web": "^0.15.0",
     "@fontsource-variable/inter": "^5.3.0",
     "@fontsource-variable/noto-sans-jp": "^5.3.0",
     "@fontsource-variable/noto-serif-kr": "^5.3.0",
@@ -50,7 +50,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-i18next": "^17.0.13",
-    "tailwind-merge": "^3.6.0",
+    "tailwind-merge": "^3.7.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
