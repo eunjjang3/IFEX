@@ -4,7 +4,7 @@ import digitalSourceVocabulary from '../data/iptcDigitalSourceTypes.json';
 import type { C2paReport } from '../types/forensics';
 import { identifyC2paProvider } from './aiProviderRegistry';
 
-let sdkPromise: Promise<import('@contentauth/c2pa-web').C2paSdk> | null = null;
+let sdkPromise: ReturnType<typeof import('@contentauth/c2pa-web').createC2pa> | null = null;
 
 const AI_GENERATED_SOURCE_TYPES = new Set([
   'trainedalgorithmicmedia',
