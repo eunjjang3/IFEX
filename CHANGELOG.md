@@ -2,6 +2,23 @@
 
 All notable IFEX changes are recorded here. The project follows semantic versioning once a version is tagged and released.
 
+## 0.1.3 - 2026-10-10
+
+### Fixed
+
+- Keep Content Credentials verification compatible with the updated C2PA SDK, including unsupported-format reporting and reader cleanup.
+- Refresh dependency license bundles alongside the combined dependency updates.
+
+### Security
+
+- Update the XML parser, HTTP client, ID generator, and glob expansion dependencies to patched versions.
+- Update the Electron desktop runtime to version 44 and refresh the image signature detection library.
+
+### Changed
+
+- Update the UI, test, build, and release tooling; remove the unused animation dependency.
+- Verify Pages configuration, Buildx initialization, and release artifact upload/download compatibility in CI.
+
 ## 0.1.2 - 2026-08-01
 
 ### Added

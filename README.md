@@ -216,15 +216,19 @@ See [`.env.local.example`](.env.local.example) for local Vite development. Docke
 Pushing a version tag matching `package.json` starts the release workflow. For example, package version `0.2.0` requires tag `v0.2.0`.
 
 ```bash
-npm version patch
-git push origin main --follow-tags
+npm version patch --no-git-tag-version
+# Commit the version and changelog on a release branch, open a PR, and merge after CI passes.
+git switch main
+git pull --ff-only
+git tag -a v0.2.0 -m "IFEX v0.2.0"
+git push origin v0.2.0
 ```
 
 After the verification and container gates pass, the workflow:
 
 - packages unsigned macOS arm64, macOS x64, and Windows x64 ZIPs;
 - publishes a multi-platform `linux/amd64` and `linux/arm64` image to `ghcr.io/eunjjang3/ifex`;
-- creates a GitHub Release with SHA-256 checksums and build provenance attestations.
+- uploads a draft GitHub Release with SHA-256 checksums and build provenance attestations, downloads and verifies the assets, then publishes the immutable release.
 
 Stable container tags include the exact version, major/minor version, major version, and `latest`.
 
