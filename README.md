@@ -177,6 +177,8 @@ npm run desktop:package:win:x64
 
 Bundles are written to `release/`. Development bundles are unsigned, are not notarized, and are not wrapped in a DMG/MSI installer. Production distribution should build on the target operating system and add platform signing before publishing.
 
+The `@electron/asar@4` dependency overrides keep its filesystem traversal and pattern matching on patched `glob` and `minimatch` versions while upstream still requires older major versions. `npm test` checks traversal cancellation, pattern expansion limits, and ASAR contents/native-module unpacking against the dependencies resolved by Electron Packager. Remove these overrides when upstream supports the patched versions; keep `npm audit` clean for both runtime and development dependencies.
+
 ## Deployment
 
 The production Docker image builds the Vite application and serves static output through Nginx. Docker and Coolify deployments read `IFEX_*` values when the container starts, so limits can change without rebuilding the image.
