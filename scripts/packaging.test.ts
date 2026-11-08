@@ -107,9 +107,11 @@ it('preserves ASAR contents, native unpacking, hidden files and internal symlink
   if (process.platform !== 'win32') await symlink('dist', path.join(source, 'assets-link'));
   await asar.createPackageWithOptions(source, archive, { unpack: '**/{.**,**}/**/*.node' });
   for (const [name, content] of contents) {
-    expect(asar.extractFile(archive, name).toString()).toBe(content);
+    // ASAR's lookup API splits directory paths using the host path separator.
+    const archiveName = path.normalize(name);
+    expect(asar.extractFile(archive, archiveName).toString()).toBe(content);
     if (name.endsWith('.node')) {
-      expect(asar.statFile(archive, name).unpacked).toBe(true);
+      expect(asar.statFile(archive, archiveName).unpacked).toBe(true);
       expect(await readFile(path.join(`${archive}.unpacked`, name), 'utf8')).toBe(content);
     }
   }
