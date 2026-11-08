@@ -2,6 +2,12 @@
 
 All notable IFEX changes are recorded here. The project follows semantic versioning once a version is tagged and released.
 
+## Unreleased
+
+### Security
+
+- Patch Electron packaging's transitive `glob` and `minimatch` dependencies to prevent continued traversal after cancellation and excessive pattern expansion. Verify the affected APIs and ASAR packaging in tests, and audit development dependencies in CI and release checks.
+
 ## 0.1.3 - 2026-10-10
 
 ### Fixed

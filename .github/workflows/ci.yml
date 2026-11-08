@@ -48,11 +48,35 @@ jobs:
       - name: Verify build environment allowlist
         run: npm run check:build-env
 
-      - name: Audit production dependencies
-        run: npm audit --omit=dev
+      - name: Audit runtime and development dependencies
+        run: npm audit
 
       - name: Build and verify container
         run: ./scripts/verify-container.sh
+
+  packaging-compatibility:
+    name: Packaging compatibility (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, windows-2025]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify packaging dependencies on the target OS
+        run: npx vitest run scripts/packaging.test.ts
 
   workflow-actions:
     name: Verify release workflow actions
